@@ -1,5 +1,6 @@
 # conews
-conews wordpress theme for [CosmetologyNews](https://newscosmetology.com/)
+
+wordpress theme for [CosmetologyNews](https://newscosmetology.com/)
 
 ## Technologies
 
