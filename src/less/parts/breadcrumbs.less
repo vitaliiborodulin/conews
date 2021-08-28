@@ -1,0 +1,38 @@
+.breadcrumbs {
+  padding: 34px 0;
+
+  font-size: 14px;
+  line-height: 16px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &.home span {
+      background: url(assets/images/svg/home.svg) no-repeat;
+      width: 15px;
+      height: 14px;
+      padding-left: 28px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // .home:hover {
+  //   text-decoration: none;
+  // }
+
+  .sep {
+    padding: 0 5px;
+  }
+
+  // & > span + span {
+  //   border-left: 1px solid @grey_info;
+  // }
+}
+
+.sep {
+  color: @grey_info;
+}

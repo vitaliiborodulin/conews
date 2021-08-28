@@ -1,0 +1,22 @@
+.header__bottom {
+    padding: 20px 0;
+    .md(display, none);
+    ul {
+        display: flex;
+        // flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    a {
+        font-size: 18px;
+        // font-weight: 800;
+        padding: 5px 10px;
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        &:hover {
+            color: @accent;
+            text-decoration: underline;
+        }
+    }
+}

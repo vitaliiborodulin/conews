@@ -1,0 +1,150 @@
+.content {
+  padding-top   : 70px;
+  padding-bottom: 80px;
+  min-height    : 100vh;
+  .md(padding-top, 60px);
+
+  &__caption {
+    margin-left     : 50px;
+    // margin-bottom: 34px;
+    max-width       : 1070px;
+
+    &::before {
+      top       : 0;
+      // content: 'К';
+    }
+  }
+
+  &__entry {
+    // & > table {
+    //   width: 100%;
+
+    //   tr {
+    //     .row-flex();
+    //   }
+
+    //   td {
+    //     .col();
+    //     .size(6);
+    //     .size-md(12);
+    //   }
+    // }
+
+    h2,
+    p,
+    li,
+    div {
+      font-size     : 16px;
+      line-height   : 19px;
+      letter-spacing: 0.05em;
+      text-align    : justify;
+    }
+
+    li {
+      text-align: left;
+    }
+
+    h2 {
+      margin     : 30px 0;
+      font-weight: 800;
+    }
+
+    p,
+    div {
+      margin: 20px 0;
+    }
+
+    ul,
+    li {
+      list-style: disc inside;
+    }
+
+    div {
+
+      // display: flex;
+      // justify-content: space-between;
+      // img {
+      //   display: inline-block;
+      //   width  : 46%;
+      // }
+
+      img+img {
+        margin-left: 10px;
+      }
+
+    }
+
+    .final {
+      padding         : 18px 38px;
+      background-color: @accent;
+    }
+
+    h2.final {
+      margin-bottom: 0;
+    }
+
+    p.final {
+      margin-top: 0;
+    }
+
+    p.final+p.final {
+      margin-top: -20px;
+    }
+  }
+
+  &__share {
+    padding-top: 10px;
+    text-align: right;
+
+    &-title {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+//для уже сделанных
+.content {
+  &__entry {
+
+    h1,
+    h1 strong,
+    h2 strong {
+      margin        : 30px 0;
+      font-weight   : 800;
+      font-size     : 16px;
+      line-height   : 19px;
+      letter-spacing: .05em;
+    }
+  }
+}
+
+//вновь открывшиеся
+.content {
+  &__entry {
+
+    .wp-block-embed-youtube {
+      margin-left : 0;
+      margin-right: 0;
+    }
+
+    .lyte-wrapper {
+      width : 100%;
+      margin: 0 !important;
+    }
+  }
+}
+
+//теги на странице новости
+.single {
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      margin: 0 15px;
+      margin-bottom: 16px;
+    }
+  }
+}

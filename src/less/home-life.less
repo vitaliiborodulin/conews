@@ -1,0 +1,166 @@
+.life {
+  padding-bottom: 114px;
+  .md(padding-bottom, 50px);
+  
+  &__wrapper {
+    padding-top: 106px;
+    padding-bottom: 87px;
+
+    // background-color: @accent;
+    background-image: url(assets/images/svg/life-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+    background-position-y: center;
+
+    .md-block({
+      // background-repeat:repeat-x;
+      // background-position-x: center;
+      background-position-y: -346px;
+      background-size: cover;
+    });
+    .sm-block({
+      background-size: auto;
+      background-position-y: top;
+    });
+  }
+
+  &__content {
+    .row-flex();
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__cards {
+    .col();
+    .size(8);
+    .size-lg(6);
+    .size-md(12);
+    .row-flex();
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: -300px;
+      top: -100px;
+      // transform: translateX(-50%);
+      background: url(assets/images/svg/life-dots.svg) no-repeat;
+      width: 634px;
+      height: 320px;
+      z-index: -1;
+      .md-block({
+        top: unset;
+        max-width: 100%;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+      });
+    }
+  }
+
+  &__card {
+    .col();
+    .size(6);
+    .size-sm(12);
+    .sm(margin-bottom, 20px);
+
+    background: @white url(assets/images/svg/right.svg) no-repeat 96% 96%;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+    .card-shadow();
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+  }
+
+  &__roll {
+    .col();
+    .size(4);
+    .size-lg(6);
+    .size-md(12);
+    .md-block({
+      order: -1;
+      // background-color: @accent;
+      // padding-top: 106px;
+    });
+  }
+
+  &__text {
+    padding: 16px 20px 44px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+
+    min-height: 34px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__descr {
+    font-size: 14px;
+    line-height: 16px;
+
+    min-height: 48px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__caption {
+    margin-left: 50px;
+    &::before {
+      color: @white;
+      content: 'Ж';
+    }
+    margin-bottom: 37px;
+  }
+
+  &__list {
+    margin-left: 34px;
+    width: 100%;
+    .md-block({
+      margin-left: 0;
+      padding-left: 30px;
+    });
+    // word-wrap: break-word;
+    li {
+      margin-bottom: 28px;
+      padding-left: 54px;
+
+      font-size: 16px;
+      line-height: 18px;
+      background: url(assets/images/svg/right.svg) no-repeat left center;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+      min-height: 36px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,19 @@
+// .font(@fname, @fstyle, @fweight, @furl) {
+// 	@font-face {
+// 		font-family: @fname;
+// 		font-style: @fstyle;
+// 		font-weight: @fweight;
+// 		font-display: swap;
+// 		src: url(@furl) format('woff2');
+// 	}
+// }
+
+// .font('Modelica', normal, 400, '../fonts/Modelica-Regular.woff2');
+
+.card-shadow() {
+  transition: all 0.5s ease;
+
+  &:hover {
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,.3);
+  }
+}

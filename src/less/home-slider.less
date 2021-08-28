@@ -1,0 +1,124 @@
+.slider {
+  padding-bottom: 62px;
+  background: url(assets/images/svg/slider-bottom-dots.svg) no-repeat 60% bottom;
+  .sm-block({
+    background: url(assets/images/svg/slider-bottom-dots.svg) no-repeat 160px bottom;
+  });
+}
+
+.swiper {
+  &-container {
+    width: 100%;
+    max-width: 1440px;
+    height: 450px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    .md-block({
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 288px;
+    });
+  //   &::after {
+  //     position: absolute;
+  //     content: '';
+  //     width: 324px;
+  //     height: 84px;
+  //     bottom: -70px;
+  //     left: 50%;
+  //     background: url(../img/svg/slider-bottom-dots.svg) no-repeat center;
+  //   }
+  }
+
+  &-slide {
+    position: relative;
+    // width: 300px;
+    height: 400px;
+    .md(height, 288px);
+    transition: all 0.3s ease;
+
+    &-active {
+      // margin-left: 20px;
+      // margin-right: 20px;
+      transform: scale(1.1);
+      // filter: drop-shadow(0px 30px 60px rgba(0, 0, 0, 0.25));
+      // border: 1px solid #000;
+      .sm(transform, none);
+
+      .swiper-btn {
+        display: block;
+      }
+    }
+  }
+
+  &-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 85px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    // min-height: 170px;
+    // background: linear-gradient(180deg, rgba(26, 91, 15, 0) 14.93%, #344839 100%);
+    background: linear-gradient(180deg, rgba(83, 84, 82, 0) 14.93%, #333 90%);
+
+    h3 {
+      margin-bottom: 6px;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: @white;
+      min-height: 48px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      // .sm-block({
+      //   font-size: 16px;
+      //   line-height: 19px;
+      // });
+    }
+  }
+
+  &-btn {
+    display: none;
+    font-weight: 600;
+    width: 260px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-decoration: none;
+    // display: block;
+    padding: 15px;
+    font-size: 16px;
+    color: inherit;
+    background-color: @accent;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease;
+
+    .sm(display, block);
+
+    &:hover {
+      background-color: darken(@accent, 10%);
+    }
+  }
+}

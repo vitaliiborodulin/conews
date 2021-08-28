@@ -1,0 +1,179 @@
+.bpopular {
+  padding-top: 70px;
+  padding-bottom: 77px;
+  .md-block({
+    padding-top: 60px;
+    padding-bottom: 10px;
+  });
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__caption {
+    // margin-bottom: 34px;
+    &::before {
+      content: 'П';
+    }
+  }
+
+  &__content {
+    .row-flex();
+  }
+
+  &__first {
+    .col();
+    .size(6);
+    .size-md(12);
+    .md(margin-bottom, 50px);
+    
+
+    &-wrapper {
+      height: 483px;
+      margin-bottom: 25px;
+      position: relative;
+      .card-shadow();
+      .sm(height, 264px);
+    }
+    
+    &-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+
+    &-title {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 3;
+      width: 75%;
+      .sm(width, 90%);
+
+      padding-top: 25px;
+      padding-bottom: 16px;
+      padding-left: 21px;
+      padding-right: 30px;
+
+      background-color: @white;
+      
+      h3 {
+        font-weight: 800;
+        line-height: 18px;
+
+        min-height: 35px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+        width: 40px;
+        height: 40px;
+        background: #F6E3E4 url(assets/images/svg/right.svg) no-repeat center;
+        z-index: 4;
+      }
+    }
+
+    &-excerpt {
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &__list {
+    .col();
+    .size(6);
+    .size-md(12);
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 15px;
+    .sm(display, block);
+    .card-shadow();
+  }
+
+  &__image {
+    width: 160px;
+    flex-shrink: 0;
+    margin-right: 20px;
+    height: 130px;
+    .sm-block({
+      width: 100px;
+      height: 81px;
+      float: left;
+    });
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    position: relative;
+    h3 {
+      margin-bottom: 18px;
+      padding-left: 65px;
+      font-weight: 800;
+      line-height: 18px;
+
+      min-height: 35px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      .sm-block({
+        margin-bottom: 13px;
+        padding-left: 0;
+        padding-top: 45px;
+      });
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      background: #F6E3E4 url(assets/images/svg/right.svg) no-repeat center;
+      z-index: 2;
+
+      .sm-block({
+        left: 120px;
+      });
+    }
+  }
+
+  &__excerpt {
+    font-size: 16px;
+    line-height: 18px;
+
+    min-height: 53px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+}

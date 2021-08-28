@@ -1,0 +1,82 @@
+.ez-toc-list {
+  li {
+      list-style: none;
+      margin-bottom: 25px;
+      position: relative;
+      padding-left: 38px;
+      text-align: left;
+      // display: -webkit-box;
+      // -webkit-line-clamp: 1;
+      // -webkit-box-orient: vertical;
+      // overflow: hidden;
+        &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 15px;
+        background: url(assets/images/svg/right.svg) no-repeat;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+#ez-toc-container {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 58px;
+  padding-right: 20px;
+  background: @accent url(assets/images/svg/toc-bg.svg) no-repeat right -100px;
+}
+
+div.toc-item {
+  margin: 0;
+  width: 100%;
+}
+
+.ez-toc-title-container {
+  margin: 0!important;
+}
+
+p.ez-toc-title {
+  margin: 0;
+  // margin-left: 50px;
+  margin-bottom: 59px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 800;
+  position: relative;
+  color: @black;
+  z-index: 2;
+  &::before {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    z-index: -1;
+    content: 'С';
+    font-family: Times;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 115px;
+    color: @white;
+  }
+}
+
+.no_bullets {
+  ul,li {
+    list-style: none;
+  }
+}
