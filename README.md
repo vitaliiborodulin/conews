@@ -8,7 +8,6 @@ wordpress theme for [CosmetologyNews](https://newscosmetology.com/)
 2. *Smartgrid* (very flexible grid framefork)
 3. *Rigger* for concat js parts
 
-
 ## Usage
 
 <ol>

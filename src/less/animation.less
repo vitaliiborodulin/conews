@@ -8,3 +8,23 @@
         background-color: transparent;
     }
 }
+
+.title-animation-idle {
+    display: block;
+    transform: translate(0, 5rem);
+    transition: all 0.6s ease;
+    opacity: 0;
+    &.activate-animation {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+  
+  
+//   .text-animation-idle {
+//     opacity: 0;
+//     transition: all 2s ease;
+//     &.activate-animation {
+//       opacity: 1;
+//     }
+//   }

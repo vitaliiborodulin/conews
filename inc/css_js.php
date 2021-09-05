@@ -25,7 +25,13 @@ add_action('wp_enqueue_scripts', function(){
   if(is_page( 14564 )){
 	  wp_enqueue_script('kirby', get_template_directory_uri() . '/assets/js/kirby.js', ['jquery'], null, true);
   }
+
   if(is_page( 15091 )){
 	  wp_enqueue_script('skin-diagnostic', get_template_directory_uri() . '/assets/js/skin-diagnostic.js', ['jquery'], null, true);
   }
+
+  if(is_page( 15811 )){
+	  wp_enqueue_script('imt', get_template_directory_uri() . '/assets/js/imt.js', ['jquery'], null, true);
+  }
+  
 });

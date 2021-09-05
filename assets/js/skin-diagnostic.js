@@ -963,7 +963,7 @@ const btnNext = $('#quiz-next');
 const totalScore = $('#total'),
     btnTryAgain = $('#quiz-try-again'),
     quizOverModal = $('.quiz__over-modal'),
-    quizComments = $('.quiz__comments');
+    quizCommentsFinal = $('.quiz__comments ');
 
 numberOfAllQuestions.html(questions.length);
 

@@ -2269,7 +2269,10 @@ p.ez-toc-title::before {
 .quiz__top p {
   max-width: 400px;
   background-color: #F6E3E4;
-  padding: 10px;
+  padding: 18px 38px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
   margin-left: auto;
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
 }
@@ -2382,6 +2385,83 @@ p.ez-toc-title::before {
   padding-bottom: 20px;
 }
 
+.quiz__inp-wrapper {
+  min-width: 200px;
+  margin: 10px 20px;
+  padding: 7px 17px 17px;
+  display: flex;
+  flex-direction: column;
+  background-color: #F6E3E4;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.quiz__inp-wrapper label {
+  margin-bottom: 5px;
+}
+
+.quiz__inp-wrapper input[type="number"] {
+  padding: 5px;
+  -moz-appearance: textfield;
+}
+
+.quiz__inp-wrapper input[type=range] {
+  margin-top: -9px;
+  width: 100%;
+  -webkit-appearance: none;
+  background-color: transparent;
+}
+
+.quiz__inp-wrapper input[type=range]:focus {
+  outline: none;
+}
+
+.quiz__final {
+  text-align: center;
+  margin: 8px 0;
+}
+
+.quiz__norma {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.page-id-15811 .quiz h2 {
+  margin-bottom: 20px;
+}
+
+.page-id-15811 .quiz__top {
+  margin-bottom: 30px;
+}
+
+.page-id-15811 .quiz__top p {
+  max-width: 700px;
+  margin-right: auto;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.page-id-15811 .quiz__content {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.page-id-15811 .quiz__comments {
+  padding: 18px 38px;
+  font-size: 16px;
+  background-color: #F6E3E4;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+}
+
+.page-id-15811 .quiz__comments p {
+  margin: 10px 0;
+}
+
+.page-id-15811 .quiz__comments ul {
+  margin: 5px 0;
+  list-style: square;
+}
+
 @-webkit-keyframes pulse {
   0% {
     background-color: #F6E3E4;
@@ -2400,6 +2480,20 @@ p.ez-toc-title::before {
   100% {
     background-color: transparent;
   }
+}
+
+.title-animation-idle {
+  display: block;
+  -webkit-transform: translate(0, 5rem);
+          transform: translate(0, 5rem);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.title-animation-idle.activate-animation {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .content__entry .feedback__text {

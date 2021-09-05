@@ -8,7 +8,10 @@
       p {
         max-width: 400px;
         background-color: @accent;
-        padding: 10px;
+        padding: 18px 38px;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: .05em;
         margin-left: auto;
         box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
       }
@@ -154,5 +157,107 @@
         padding-top: 10px;
         padding-bottom: 20px;
     }
+
+    //расчёт имт
+    &__inp-wrapper {
+      min-width: 200px;
+      margin: 10px 20px;
+      padding: 7px 17px 17px;
+      display: flex;
+      flex-direction: column;
+      background-color: @accent;
+      box-shadow: 0 3px 8px 0 rgba(0,0,0,.3);
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      input[type="number"] {
+        // font-size: 20px;
+        // padding: 16px 32px;
+        padding: 5px;
+        -moz-appearance: textfield;
+      }
+
+      input[type=range] {
+        margin-top: -9px;
+        width: 100%;
+        -webkit-appearance: none;
+        background-color: transparent;
+
+        &:focus {
+          outline: none; 
+        }
+      }
+
+    }
+
+    &__final {
+      text-align: center;
+      margin: 8px 0;
+    }
+
+    &__norma {
+      margin-bottom: 10px;
+      text-align: center;
+      // font-family: 'Raleway', sans-serif;
+      // font-weight: 600;
+    }
   
   }
+
+//расчёт имт
+.page-id-15811 {
+  .quiz {
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    &__top {
+      margin-bottom: 30px;
+
+      p {
+        max-width: 700px;
+        margin-right: auto;
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+
+    &__content {
+      max-width: 700px;
+      // justify-content: space-evenly;
+      // padding: 20px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      // background-color: @accent;
+    }
+
+    &__comments {
+      // display: inline-block;
+      padding: 18px 38px;
+      font-size: 16px;
+      // text-align: center;
+      background-color: @accent;
+      box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+
+      // font-family: 'Raleway', sans-serif;
+      // font-weight: 600;
+
+      p {
+        margin: 10px 0;
+      }
+
+      ul {
+        margin: 5px 0;
+        list-style: square;
+      }
+    }
+
+    // &__over-modal {
+    //   text-align: center;
+    // }
+  }
+}
+
