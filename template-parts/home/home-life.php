@@ -45,7 +45,7 @@
       )); ?>
 
         <div class="life__roll">
-          <h2 class="section-caption life__caption">Жизнь</h2>
+          <h2 class="section-caption life__caption title-animation-idle">Жизнь</h2>
 
           <?php if ( $loop_second->have_posts() ): ?>
 
@@ -53,7 +53,7 @@
 
             <?php while ( $loop_second->have_posts() ): $loop_second->the_post(); ?>
 
-              <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+              <li class="title-animation-idle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 
             <?php endwhile; ?>
 

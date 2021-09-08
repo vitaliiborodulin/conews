@@ -517,9 +517,19 @@ header {
   background-color: #eabcbf;
 }
 
+.cosmetology__caption {
+  margin-left: 50px;
+  margin-bottom: 37px;
+}
+
+.cosmetology__caption::before {
+  color: #ffffff;
+  content: 'К';
+}
+
 .beautiful {
-  padding-top: 104px;
-  padding-bottom: 89px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 .beautiful__caption {
@@ -696,7 +706,8 @@ header {
 }
 
 .life {
-  padding-bottom: 114px;
+  padding-top: 114px;
+  padding-bottom: 45px;
 }
 
 .life__wrapper {
@@ -2462,6 +2473,20 @@ p.ez-toc-title::before {
   list-style: square;
 }
 
+.title-animation-idle {
+  display: block;
+  -webkit-transform: translate(0, 5rem);
+          transform: translate(0, 5rem);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.title-animation-idle.activate-animation {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
 @-webkit-keyframes pulse {
   0% {
     background-color: #F6E3E4;
@@ -2480,20 +2505,6 @@ p.ez-toc-title::before {
   100% {
     background-color: transparent;
   }
-}
-
-.title-animation-idle {
-  display: block;
-  -webkit-transform: translate(0, 5rem);
-          transform: translate(0, 5rem);
-  transition: all 0.6s ease;
-  opacity: 0;
-}
-
-.title-animation-idle.activate-animation {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-  opacity: 1;
 }
 
 .content__entry .feedback__text {
@@ -2617,10 +2628,6 @@ input[name="your-acceptance"] {
     height: 288px;
   }
 
-  .beautiful {
-    padding-top: 89px;
-  }
-
   .beautiful__top {
     margin-bottom: 43px;
     padding-bottom: 80px;
@@ -2645,7 +2652,7 @@ input[name="your-acceptance"] {
   }
 
   .life {
-    padding-bottom: 50px;
+    padding-top: 50px;
   }
 
   .life__wrapper {

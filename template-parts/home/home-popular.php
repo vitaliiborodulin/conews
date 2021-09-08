@@ -1,6 +1,6 @@
 <section class="hpopular">
   <div class="container">
-    <h2 class="section-caption hpopular__caption">Популярные статьи</h2>
+    <h2 class="section-caption hpopular__caption title-animation-idle">Популярные статьи</h2>
 
     <?php $loop = new WP_Query([
       'posts_per_page' => 6,

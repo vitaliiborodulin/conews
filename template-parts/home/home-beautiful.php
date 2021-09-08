@@ -5,8 +5,10 @@
 
       <?php $loop_first = new WP_Query(array(
           'posts_per_page' => 1,
-          'meta_key'       => 'views',
-          'orderby'        => 'meta_value_num',
+          // 'offset'         => 1,
+          // 'meta_key'       => 'views',
+          // 'orderby'        => 'meta_value_num',
+          'orderby'        => 'date',
           'order'          => 'DESC',
           'cat'            => 4
       )); ?>
@@ -15,11 +17,11 @@
 
         <?php while ( $loop_first->have_posts() ) { $loop_first->the_post(); ?>
 
-          <div class="beautiful__top-left">
+          <div class="beautiful__top-left title-animation-idle">
             <h2 class="section-caption beautiful__caption"><?php the_title(); ?></h2>
             <a href="<?php the_permalink(); ?>" class="btn btn-more btn-read beautiful__top-btn">Читать далее</a>
           </div>
-          <div class="beautiful__top-right">
+          <div class="beautiful__top-right title-animation-idle">
             <div class="beautiful__top-excerpt"><?php the_excerpt(); ?></div>
             <div class="beautiful__top-info">
               <div class="beautiful__top-views"><?php echo get_post_meta( get_the_ID(), 'views', true ); ?></div>
@@ -38,8 +40,9 @@
     <?php $loop_second = new WP_Query(array(
         'posts_per_page' => 3,
         'offset'         => 1,
-        'meta_key'       => 'views',
-        'orderby'        => 'meta_value_num',
+        // 'meta_key'       => 'views',
+        // 'orderby'        => 'meta_value_num',
+        'orderby'        => 'date',
         'order'          => 'DESC',
         'cat'            => 4
     )); ?>
