@@ -57,6 +57,8 @@
 
             <?php endwhile; ?>
 
+            <li class="life__all title-animation-idle"><a href="<?php echo get_category_link('3'); ?>">Все статьи</a></li>
+
           </ul>
 
           <?php endif; wp_reset_postdata(); ?>

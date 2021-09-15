@@ -195,6 +195,10 @@ input[type='submit'] {
   appearance: none;
 }
 
+a {
+  color: #000;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -834,6 +838,13 @@ header {
   font-size: 16px;
   line-height: 18px;
   background: url(assets/images/svg/right.svg) no-repeat left center;
+}
+
+.life__list li.life__all {
+  margin-bottom: 0;
+  background: none;
+  text-decoration: underline;
+  font-size: 20px;
 }
 
 .life__list a {
@@ -2637,14 +2648,18 @@ input[name="your-acceptance"] {
     width: calc(100% - 20px);
   }
 
+  .beautiful__top-left {
+    margin-bottom: 40px;
+  }
+
   .beautiful__top-right {
     width: calc(100% - 20px);
   }
 
   .beautiful__top-btn {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: -20px;
+    left: 0;
   }
 
   .beautiful .item {

@@ -9,7 +9,7 @@
           // 'meta_key'       => 'views',
           // 'orderby'        => 'meta_value_num',
           'orderby'        => 'date',
-          'order'          => 'DESC',
+          'order'          => 'ASC',
           'cat'            => 4
       )); ?>
 

@@ -1,5 +1,4 @@
-const questions = [
-    {
+const questions = [{
         question: 'Укажите Ваш возраст:',
         options: [
             'До 25',
@@ -56,10 +55,9 @@ const questions = [
     }
 ];
 
-const answers = [
-    {
+const answers = [{
         name: 'Кожа сухая',
-        comment: '<p>У вас поры почти незаметны, кожа матовая, может быть шершавой на ощупь, чёрных точек практически нет или они отсутствуют вовсе. Что такое морщинки вы узнали до 30 лет. Вам необходим правильный домашний уход, который включает очищение, увлажнение, питание и защиту кожи. Без адекватного ухода за кожей вы будете стареть значительно быстрее.</p><p>Более подробно читайте в статье <a href="https://newscosmetology.com/publikaczii/kosmetologiya-licza-i-tela/sredstva/sovety-po-uhodu-za-suhoj-kozhej-licza/">советы по уходу за сухой кожей лица</a>.</p>',
+        comment: '<p>У вас поры почти незаметны, кожа матовая, может быть шершавой на ощупь, чёрных точек практически нет или они отсутствуют вовсе. Что такое морщинки вы узнали до 30 лет. Вам необходим правильный домашний уход, который включает очищение, увлажнение, питание и защиту кожи. Без адекватного ухода за кожей вы будете стареть значительно быстрее.</p><p>Более подробно читайте в статье <a href="https://newscosmetology.com/publikaczii/kosmetologiya-licza-i-tela/sredstva/7-pravil-uhoda-za-suhoj-kozhej/" target="_blank">советы по уходу за сухой кожей лица</a>.</p>',
         answer: [
             '1,1,1,1,1,1',
             '1,1,1,1,1,2',
@@ -149,7 +147,7 @@ const answers = [
     },
     {
         name: 'Кожа нормальная',
-        comment: '<p>У вас нет проблем с прыщами, сухостью, жирным блеском и раздражением. Кожа гладкая, ровная, упругая и имеет здоровый цвет. Невзирая на отличные параметры этому типу кожи необходим базовый поддерживающий домашний уход, который включает: очищение, тонизирование, увлажнение, питание и защиту. </p><p>Более подробно о том, как обеспечить минимальный <a href="https://newscosmetology.com/publikaczii/kosmetologiya-licza-i-tela/sredstva/kak-obespechit-minimalnyj-uhod-za-kozhej-licza-i-sohranit-svoyu-krasotu/">домашний уход за кожей лица</a> и сохранить свою красоту.</p>',
+        comment: '<p>У вас нет проблем с прыщами, сухостью, жирным блеском и раздражением. Кожа гладкая, ровная, упругая и имеет здоровый цвет. Невзирая на отличные параметры этому типу кожи необходим базовый поддерживающий домашний уход, который включает: очищение, тонизирование, увлажнение, питание и защиту. </p><p>Более подробно о том, как обеспечить минимальный <a href="https://newscosmetology.com/publikaczii/kosmetologiya-licza-i-tela/sredstva/7-pravil-uhoda-za-normalnoj-kozhej/" target="_blank">домашний уход за нормальной кожей лица</a> и сохранить свою красоту.</p>',
         answer: [
             '1,1,1,1,3,2',
             '1,1,1,2,2,2',
@@ -587,7 +585,7 @@ const answers = [
     },
     {
         name: 'Кожа комбинированная',
-        comment: '<p>У вас сочетание из всех четырёх типов кожи. Обезвоженная или нормальная кожа на висках и щеках сочетается с очень жирной Т- зоной, на которой расширены поры. У вас иногда появляются воспалительные элементы в Т- зоне и неровный цвет лица. Что делать с этой гибридностью? Для сухой кожи используйте плотные питательные и увлажняющие средства, а для Т- зоны лёгкие гели или флюиды которые убирают жирный блеск.</p>',
+        comment: '<p>У вас сочетание из всех четырёх типов кожи. Обезвоженная или нормальная кожа на висках и щеках сочетается с очень жирной Т- зоной, на которой расширены поры. У вас иногда появляются воспалительные элементы в Т- зоне и неровный цвет лица. Что делать с этой гибридностью? Для сухой кожи используйте плотные питательные и увлажняющие средства, а для Т- зоны лёгкие гели или флюиды которые убирают жирный блеск.</p><p>Более подробно о том, как обеспечить минимальный <a href="https://newscosmetology.com/publikaczii/kosmetologiya-licza-i-tela/sredstva/7-pravil-uhoda-za-kombinirovannoj-kozhej/" target="_blank">домашний уход за комбинированной кожей лица</a> и сохранить свою красоту.</p>',
         answer: [
             '1,1,2,3,3,2',
             '1,1,3,2,3,2',
@@ -921,7 +919,7 @@ const answers = [
     },
     {
         name: 'Кожа жирная',
-        comment: '<p>У вас липкая, блестящая, жирная кожа с расширенными порами и чёрными точками, которая склонна к появлению воспалительных элементов. У вас жирный тип кожи лица всё, что вам нужно, это правильно подобранный домашний уход и косметологические процедуры, чтобы контролировать жирность.</p><p>Более подробно читайте в статье: <a href="https://newscosmetology.com/publikaczii/kosmetologiya-licza-i-tela/sredstva/pravilnyj-ezhednevnyj-uhod-za-zhirnoj-kozhej-licza/">Правильный ежедневный уход за жирной кожей лица</a>.</p>',
+        comment: '<p>У вас липкая, блестящая, жирная кожа с расширенными порами и чёрными точками, которая склонна к появлению воспалительных элементов. У вас жирный тип кожи лица всё, что вам нужно, это правильно подобранный домашний уход и косметологические процедуры, чтобы контролировать жирность.</p><p>Более подробно читайте в статье: <a href="https://newscosmetology.com/publikaczii/kosmetologiya-licza-i-tela/sredstva/7-pravil-uhoda-za-zhirnoj-kozhej/" target="_blank">Правильный ежедневный уход за жирной кожей лица</a>.</p>',
         answer: [
             '1,2,4,3,3,2',
             '1,3,4,2,3,2',
@@ -967,7 +965,7 @@ const totalScore = $('#total'),
 
 numberOfAllQuestions.html(questions.length);
 
-options.on('click', '.quiz__item', function () {
+options.on('click', '.quiz__item', function() {
     $(this).addClass('quiz__item--choose').siblings().removeClass('quiz__item--choose');
     btnNext.prop("disabled", false);
 });
@@ -1010,7 +1008,7 @@ function validate() {
     if (!disableNext) {
         alert('Выберите вариант ответа!');
     } else {
-        options.children().each(function (index, element) {
+        options.children().each(function(index, element) {
             if ($(element).hasClass('quiz__item--choose')) {
                 //тут надо проверить индекс выбранного элемента и добавить его в массив ответов
                 score.push(index + 1);
@@ -1035,7 +1033,7 @@ function quizOver() {
     $('.quiz-container').hide();
     score = score.toString();
 
-    answers.forEach(function (item) {
+    answers.forEach(function(item) {
         for (let i = 0; i < item.answer.length; i++) {
             // console.log(item.answer[i]);
             if (item.answer[i] === score) {
@@ -1045,7 +1043,7 @@ function quizOver() {
         }
     })
 
-    quizComments.html(comment);
+    quizCommentsFinal.html(comment);
     totalScore.html(type);
     quizOverModal.show();
 }
@@ -1057,6 +1055,6 @@ function tryAgain() {
 btnNext.on('click', validate);
 btnTryAgain.on('click', tryAgain);
 
-$(function () {
+$(function() {
     render(indexOfPage);
 });

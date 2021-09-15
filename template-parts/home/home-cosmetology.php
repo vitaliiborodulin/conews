@@ -51,15 +51,17 @@
 
           <?php if ( $loop_second->have_posts() ): ?>
 
-          <ul class="life__list">
+            <ul class="life__list">
 
-            <?php while ( $loop_second->have_posts() ): $loop_second->the_post(); ?>
+              <?php while ( $loop_second->have_posts() ): $loop_second->the_post(); ?>
 
-              <li class="title-animation-idle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                <li class="title-animation-idle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 
-            <?php endwhile; ?>
+              <?php endwhile; ?>
 
-          </ul>
+              <li class="life__all title-animation-idle"><a href="<?php echo get_category_link('14'); ?>">Все статьи</a></li>
+
+            </ul>
 
           <?php endif; wp_reset_postdata(); ?>
 
