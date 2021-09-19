@@ -1,6 +1,6 @@
 <section class="same">
   <div class="container">
-    <h2 class="section-caption same__caption">Читайте также</h2>
+    <h2 class="section-caption same__caption title-animation-idle">Читайте также</h2>
 
     <?php $categories = get_the_category($post->ID);
 
@@ -22,7 +22,7 @@
 
           <?php while ($loop->have_posts()) {  $loop->the_post(); ?>
 
-          <div class="same__item">
+          <div class="same__item title-animation-idle">
             <div class="same__image">
               <?php if ( has_post_thumbnail()) { ?>
                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >

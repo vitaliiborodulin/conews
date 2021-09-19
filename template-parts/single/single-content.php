@@ -16,7 +16,7 @@
 
         </div>
 
-        <div class="tags">
+        <div class="tags title-animation-idle" >
           <?php the_tags( '','',''); ?>
         </div>
         

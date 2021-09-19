@@ -33,5 +33,8 @@ add_action('wp_enqueue_scripts', function(){
   if(is_page( 15811 )){
 	  wp_enqueue_script('imt', get_template_directory_uri() . '/assets/js/imt.js', ['jquery'], null, true);
   }
-  
+
+  if(is_page( 16673 )){
+    wp_enqueue_script('metabolism', get_template_directory_uri() . '/assets/js/metabolism.js', ['jquery'], null, true);
+  }
 });

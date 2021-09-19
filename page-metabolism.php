@@ -4,14 +4,14 @@
     <div class="container">
 
       <style>.content__caption:before {content: '<?php echo mb_substr(get_the_title(),0,1); ?>';}</style>
-      <div class="quiz__top">
-        <h1 class="section-caption content__caption quiz__caption">ТЕСТ: Какой у вас тип кожи?</h1>
-        <p>Хотите определить свой тип кожи лица? Пройдите наш бесплатный тест и получите советы по уходу за Вашим типом кожи.</p>
+      <div class="quiz__top quiz__top--alter">
+        <h1 class="section-caption content__caption quiz__caption">Тест Джиллиан Майклс на определение типа метаболизма</h1>
+        <p>Этот тест взят из книги Джиллиан Майклс «Making the cut». В каждом вопросе выберите наиболее подходящий для себя один из трёх вариантов ответа. Не торопитесь с ответом на поставленный вопрос, будьте честны с собой в каждом утверждении.</p>
       </div>
 
       <div class="quiz__over-modal">
-        <h2>Тип вашей кожи: <span id="total"></span></h2>
-        <div class="quiz__comments"></div>
+        <h2>Ваш метаболизм</h2>
+        <div class="quiz__comments quiz__comments--alter"></div>
 
         <div class="quiz__over-wrapper">
           <div class="quiz__share">
@@ -27,14 +27,14 @@
       <div class="quiz-container">
 
         <h2 class="quiz__question quiz__question--alt">
-          <div class="quiz__number">Вопрос
-            <span class="quiz__number-of-question"></span> из
-            <span class="quiz__number-of-all-questions"></span>.
-          </div>
-          <div class="quiz__name"></div>
+            <div class="quiz__number">Вопрос
+                <span class="quiz__number-of-question"></span> из
+                <span class="quiz__number-of-all-questions"></span>.
+            </div>
+            <div class="quiz__name"></div>
         </h2>
 
-        <div class="quiz__content"></div>
+        <div class="quiz__content quiz__content--alter"></div>
         <button id="quiz-next" class="btn btn-quiz" disabled>Далее</button>
 
       </div>
