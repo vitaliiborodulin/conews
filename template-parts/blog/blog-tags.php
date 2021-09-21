@@ -9,7 +9,7 @@
     ?>
     <ul class="tags__list">
       <?php foreach( $tags as $tag ) { ?>
-        <li class="tags__item"><a href="<?php echo get_term_link( $tag, 'post_tag' ); ?>"><?php echo $tag->name; ?></a></li>
+        <li class="tags__item title-animation-idle"><a href="<?php echo get_term_link( $tag, 'post_tag' ); ?>"><?php echo $tag->name; ?></a></li>
       <?php } ?>
     </ul>
       <?php } ?>

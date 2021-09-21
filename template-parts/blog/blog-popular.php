@@ -1,6 +1,6 @@
 <section class="bpopular">
   <div class="container">
-    <h2 class="section-caption bpopular__caption">Популярные в категории <?php single_cat_title(); ?></h2>
+    <h2 class="section-caption bpopular__caption title-animation-idle">Популярные в категории <?php single_cat_title(); ?></h2>
     
     <?php if ( function_exists('dimox_breadcrumbs') ) dimox_breadcrumbs(); ?>
 

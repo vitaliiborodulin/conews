@@ -37,8 +37,35 @@
 
   &__logo {
     display: inline-block;
+  }
+  
+  &__soc {
     margin-bottom: 47px;
-    .sm(margin-bottom, 71px);
+    margin-left: 65px;
+    padding: 5px 0;
+    .sm(margin-bottom, 60px);
+
+    a {
+      text-decoration: none;
+      
+      &:first-child svg:hover {
+        fill: red;
+      }
+      &:nth-child(2) svg:hover {
+        fill: blue;
+      }
+      &:nth-child(3) svg:hover {
+        fill: cornflowerblue;
+      }
+      &:nth-child(4) svg:hover {
+        fill: black
+      }
+    }
+
+    svg { 
+      fill: @accent;
+      transition: all 0.3s ease;
+    }
   }
 
   &__slogan {

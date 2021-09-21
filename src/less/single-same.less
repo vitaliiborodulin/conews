@@ -22,10 +22,22 @@
     margin-bottom: 20px;
     overflow: hidden;
 
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
     img {
       // width: 100%;
       object-fit: cover;
       height: 100%;
+      transition: transform 1s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 

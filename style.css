@@ -366,6 +366,36 @@ header {
   align-items: center;
 }
 
+.header__soc {
+  text-align: center;
+  padding: 5px 0;
+}
+
+.header__soc a {
+  text-decoration: none;
+}
+
+.header__soc a:first-child svg:hover {
+  fill: red;
+}
+
+.header__soc a:nth-child(2) svg:hover {
+  fill: blue;
+}
+
+.header__soc a:nth-child(3) svg:hover {
+  fill: cornflowerblue;
+}
+
+.header__soc a:nth-child(4) svg:hover {
+  fill: black;
+}
+
+.header__soc svg {
+  fill: #F6E3E4;
+  transition: all 0.3s ease;
+}
+
 .header__menu-toggle {
   background: transparent;
   border: none;
@@ -430,6 +460,7 @@ header {
 }
 
 .slider {
+  padding-top: 15px;
   padding-bottom: 62px;
   background: url(assets/images/svg/slider-bottom-dots.svg) no-repeat 60% bottom;
 }
@@ -471,6 +502,14 @@ header {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.swiper-image img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .swiper-text {
@@ -652,6 +691,14 @@ header {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.beautiful .item img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .beautiful .item__image {
@@ -661,6 +708,13 @@ header {
   width: 100%;
   height: 100%;
   z-index: 2;
+}
+
+.beautiful .item__image a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .beautiful .item__descr {
@@ -774,9 +828,27 @@ header {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
+.life__card img {
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.life__card img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .life__card a {
   color: inherit;
   text-decoration: none;
+}
+
+.life__card > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .life__roll {
@@ -908,11 +980,26 @@ header {
   z-index: 2;
 }
 
+.hpopular .item__image a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .hpopular .item__image img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.hpopular .item__image img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .hpopular .item__descr {
@@ -1300,11 +1387,26 @@ header {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
+.publications .item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .publications .item img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.publications .item img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .publications .item__image {
@@ -1434,6 +1536,12 @@ header {
   background-color: #F6E3E4;
 }
 
+.content__entry .final2 {
+  margin: 18px 0;
+  padding: 18px 38px;
+  background-color: #F6E3E4;
+}
+
 .content__entry h2.final {
   margin-bottom: 0;
 }
@@ -1518,10 +1626,25 @@ header {
   overflow: hidden;
 }
 
+.same__item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .same__item img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.same__item img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .same__image {
@@ -1630,7 +1753,37 @@ header {
 
 .footer__logo {
   display: inline-block;
+}
+
+.footer__soc {
   margin-bottom: 47px;
+  margin-left: 65px;
+  padding: 5px 0;
+}
+
+.footer__soc a {
+  text-decoration: none;
+}
+
+.footer__soc a:first-child svg:hover {
+  fill: red;
+}
+
+.footer__soc a:nth-child(2) svg:hover {
+  fill: blue;
+}
+
+.footer__soc a:nth-child(3) svg:hover {
+  fill: cornflowerblue;
+}
+
+.footer__soc a:nth-child(4) svg:hover {
+  fill: black;
+}
+
+.footer__soc svg {
+  fill: #F6E3E4;
+  transition: all 0.3s ease;
 }
 
 .footer__slogan {
@@ -1679,11 +1832,12 @@ header {
 .share {
   position: relative;
   display: flex;
+  align-items: center;
   padding: 10px;
 }
 
 .share > li + li {
-  margin-left: 25px;
+  margin-left: 10px;
 }
 
 .footer .share {
@@ -2936,8 +3090,8 @@ input[name="your-acceptance"] {
     width: calc(100% - 20px);
   }
 
-  .footer__logo {
-    margin-bottom: 71px;
+  .footer__soc {
+    margin-bottom: 60px;
   }
 
   .header .share li + li {
@@ -2945,7 +3099,7 @@ input[name="your-acceptance"] {
   }
 
   .footer .share {
-    top: 118px;
+    top: 99px;
     left: 0;
     right: unset;
   }
@@ -2980,5 +3134,11 @@ input[name="your-acceptance"] {
   .container-full {
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+
+@media (any-pointer: coarse) {
+  .slider__text {
+    pointer-events: none;
   }
 }

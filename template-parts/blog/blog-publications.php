@@ -1,6 +1,6 @@
 <section class="publications">
   <div class="container">
-    <h2 class="section-caption publications__caption">Публикации</h2>
+    <h2 class="section-caption publications__caption title-animation-idle">Публикации</h2>
 
     <?php $catID = get_query_var( 'cat' ); ?>
 
