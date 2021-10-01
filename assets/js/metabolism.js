@@ -618,6 +618,7 @@ options.on('click', '.quiz__item', function() {
 function render(indexOfQuestion) {
 
     if (indexOfPage >= 1) {
+        $('.quiz__caption').slideUp();
         $('.quiz__top p').slideUp();
     }
 

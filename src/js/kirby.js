@@ -1,8 +1,6 @@
-const questions = [
-    {
+const questions = [{
         question: 'Тип кожи:',
-        options: [
-            {
+        options: [{
                 name: 'Всегда сгорает. Никогда не загорает',
                 points: 1,
                 image: '/wp-content/themes/conews/assets/images/kirby/skin-1.svg',
@@ -42,8 +40,7 @@ const questions = [
     },
     {
         question: 'Расположение тату:',
-        options: [
-            {
+        options: [{
                 name: 'Голова, шея, лицо',
                 points: 1,
                 image: '/wp-content/themes/conews/assets/images/kirby/location-1.svg',
@@ -77,8 +74,7 @@ const questions = [
     },
     {
         question: 'Плотность пигмента:',
-        options: [
-            {
+        options: [{
                 name: 'Мало, легкая тень',
                 points: 1,
                 image: '/wp-content/themes/conews/assets/images/kirby/ink-1.svg',
@@ -106,8 +102,7 @@ const questions = [
     },
     {
         question: 'Наслоение пигмента:',
-        options: [
-            {
+        options: [{
                 name: 'Один слой',
                 points: 0,
                 image: '/wp-content/themes/conews/assets/images/kirby/layering-1.svg',
@@ -123,8 +118,7 @@ const questions = [
     },
     {
         question: 'Состояние кожи:',
-        options: [
-            {
+        options: [{
                 name: 'Здоровая кожа',
                 points: 0,
                 image: '/wp-content/themes/conews/assets/images/kirby/scarring-1.svg',
@@ -152,8 +146,7 @@ const questions = [
     },
     {
         question: 'Цвета тату:',
-        options: [
-            {
+        options: [{
                 name: 'Только черный',
                 points: 1,
                 image: '/wp-content/themes/conews/assets/images/kirby/colors-1.svg',
@@ -199,12 +192,17 @@ const totalScore = $('#total'),
 
 numberOfAllQuestions.html(questions.length);
 
-options.on('click', '.quiz__item', function () {
+options.on('click', '.quiz__item', function() {
     $(this).addClass('quiz__item--choose').siblings().removeClass('quiz__item--choose');
     btnNext.prop("disabled", false);
 });
 
 function render(indexOfQuestion) {
+
+    if (indexOfPage >= 1) {
+        $('.quiz__caption').slideUp();
+        // $('.quiz__top p').slideUp();
+    }
 
     if (indexOfPage == questions.length) {
         quizOver();
@@ -245,7 +243,7 @@ function validate() {
     if (!disableNext) {
         alert('Выберите вариант ответа!')
     } else {
-        options.children().each(function (index, element) {
+        options.children().each(function(index, element) {
             if ($(element).hasClass('quiz__item--choose')) {
                 //суммируем баллы с выбранным вариантом
                 score += parseInt($(element).data('score'));
@@ -284,6 +282,6 @@ function tryAgain() {
 btnNext.on('click', validate);
 btnTryAgain.on('click', tryAgain);
 
-$(function () {
+$(function() {
     render(indexOfPage);
 });

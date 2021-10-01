@@ -24,11 +24,11 @@
 
       <div class="quiz-container">
 
-        <h2 class="quiz__question">
-          <span class="quiz__number">Вопрос
+        <h2 class="quiz__question quiz__question--alt">
+          <div class="quiz__number">Вопрос
             <span class="quiz__number-of-question"></span> из
             <span class="quiz__number-of-all-questions"></span>.
-          </span>
+          </div>
           <span class="quiz__name"></span>
         </h2>
 

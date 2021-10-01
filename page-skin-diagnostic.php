@@ -4,7 +4,7 @@
     <div class="container">
 
       <style>.content__caption:before {content: '<?php echo mb_substr(get_the_title(),0,1); ?>';}</style>
-      <div class="quiz__top">
+      <div class="quiz__top quiz__top--alter">
         <h1 class="section-caption content__caption quiz__caption">ТЕСТ: Какой у вас тип кожи?</h1>
         <p>Хотите определить свой тип кожи лица? Пройдите наш бесплатный тест и получите советы по уходу за Вашим типом кожи.</p>
       </div>
