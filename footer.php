@@ -35,14 +35,25 @@
       </div>
 
       <div class="footer__center">
+
+        <div id="yandex_rtb_R-A-873318-1"></div>
+        <script>window.yaContextCb.push(()=>{
+          Ya.Context.AdvManager.render({
+            renderTo: 'yandex_rtb_R-A-873318-1',
+            blockId: 'R-A-873318-1'
+          })
+        })</script>
+
+      </div>
+
+      <div class="footer__right">
+        
         <?php wp_nav_menu([
           'theme_location'  => 'footer-1',
           'container'       => null,
           'menu_class'      => 'footer__menu'
         ]);?>
-      </div>
 
-      <div class="footer__right">
         <?php wp_nav_menu([
           'theme_location'  => 'footer-2',
           'container'       => null,

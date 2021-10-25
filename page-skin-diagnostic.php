@@ -3,7 +3,6 @@
 <section class="quiz">
     <div class="container">
 
-      <style>.content__caption:before {content: '<?php echo mb_substr(get_the_title(),0,1); ?>';}</style>
       <div class="quiz__top quiz__top--alter">
         <h1 class="section-caption content__caption quiz__caption">ТЕСТ: Какой у вас тип кожи?</h1>
         <p>Хотите определить свой тип кожи лица? Пройдите наш бесплатный тест и получите советы по уходу за Вашим типом кожи.</p>
@@ -27,11 +26,11 @@
       <div class="quiz-container">
 
         <h2 class="quiz__question quiz__question--alt">
-          <div class="quiz__number">Вопрос
+          <span class="quiz__number">Вопрос
             <span class="quiz__number-of-question"></span> из
             <span class="quiz__number-of-all-questions"></span>.
-          </div>
-          <div class="quiz__name"></div>
+          </span>
+          <span class="quiz__name"></span>
         </h2>
 
         <div class="quiz__content"></div>

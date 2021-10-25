@@ -4,12 +4,13 @@
     <div class="container">
 
       <div class="quiz__top quiz__top--alter">
-        <h1 class="section-caption content__caption quiz__caption">Тест Джиллиан Майклс на определение типа метаболизма</h1>
-        <p>Этот тест взят из книги Джиллиан Майклс «Making the cut». В каждом вопросе выберите наиболее подходящий для себя один из трёх вариантов ответа. Не торопитесь с ответом на поставленный вопрос, будьте честны с собой в каждом утверждении.</p>
+        <h1 class="section-caption content__caption quiz__caption">Тест Айзенка - опросник EPI (Eysenck Personality Inventory)</h1>
+        <p>Вам предлагается ответить на 57 вопросов. Вопросы направлены на выявление вашего обычного способа поведения. Постарайтесь представить типичные ситуации и дайте первый «естественный» ответ, который придёт вам в голову. Отвечайте быстро и точно. Помните, что нет «хороших» или «плохих» ответов.</p>
       </div>
 
       <div class="quiz__over-modal">
-        <h2>Ваш метаболизм</h2>
+        <h2>Результаты теста</h2>
+        <div class="quiz__final"></div>
         <div class="quiz__comments quiz__comments--alter"></div>
 
         <div class="quiz__over-wrapper">
@@ -33,7 +34,7 @@
             <span class="quiz__name"></span>
         </h2>
 
-        <div class="quiz__content quiz__content--alter"></div>
+        <div class="quiz__content"></div>
         <button id="quiz-next" class="btn btn-quiz" disabled>Далее</button>
 
       </div>

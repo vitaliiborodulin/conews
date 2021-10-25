@@ -1,6 +1,6 @@
 <section class="news">
   <div class="container">
-    <h2 class="section-caption news__caption">Результаты поиска по запросу: "<?php the_search_query(); ?>"</h2>
+    <h1 class="section-caption news__caption">Результаты поиска по запросу: "<?php the_search_query(); ?>"</h1>
 
     <?php if (have_posts()) : ?>
 

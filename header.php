@@ -4,10 +4,8 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="shortcut icon" href="/favicon.ico" sizes="16x16 32x32" type="image/x-icon"> -->
-  <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
-
   <?php wp_head(); ?>
+  <style>.content__caption:before {content: '<?php echo mb_substr(get_the_title(),0,1); ?>';}</style>
 </head>
 
 <body <?php body_class(); ?>>

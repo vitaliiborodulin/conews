@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-  	<h1 class="visually-hidden"><?php bloginfo('name'); ?></h1>
+  	<h1 class="visually-hidden">Новости, статьи и обзоры по косметологии и эстетической медицине<?php //bloginfo('name'); ?></h1>
 
 	<!-- new posts from entire site -->
 	<?php get_template_part( 'template-parts/home/home-slider' ); ?> 

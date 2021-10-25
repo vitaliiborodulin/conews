@@ -1,7 +1,7 @@
 <section class="publications">
   <div class="container">
 
-    <h2 class="section-caption publications__caption">Публикации по тегу <?php single_tag_title(); ?></h2>
+    <h1 class="section-caption publications__caption">Публикации по тегу <?php single_tag_title(); ?></h1>
 
     <?php $tag = get_query_var( 'tag' ); ?>
 

@@ -3,7 +3,6 @@
   <section class="quiz">
     <div class="container">
 
-      <style>.content__caption:before {content: '<?php echo mb_substr(get_the_title(),0,1); ?>';}</style>
       <h1 class="section-caption content__caption quiz__caption">Калькулятор расчета числа сеансов лазерного удаления тату</h1>
 
       <div class="quiz__over-modal">
@@ -25,10 +24,10 @@
       <div class="quiz-container">
 
         <h2 class="quiz__question quiz__question--alt">
-          <div class="quiz__number">Вопрос
+          <span class="quiz__number">Вопрос
             <span class="quiz__number-of-question"></span> из
             <span class="quiz__number-of-all-questions"></span>.
-          </div>
+          </span>
           <span class="quiz__name"></span>
         </h2>
 
