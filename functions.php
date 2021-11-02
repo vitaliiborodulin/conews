@@ -72,6 +72,7 @@ function custom_dashboard_help() {
     	<li>Не забывайте настраивать правильную сео-информацию внизу каждой статьи</li>
 		<li>Не забывайте прогонять фоточки через оптимизатор (<a href="https://tinypng.com/">Например такой</a>) до загрузки на сайт, экономьте место и время, это важно!</li>
 		<li>Для анимирования блока при прокрутке добавьте ему класс title-animation-idle</li>
+		<li>Не создавайте тэги с таким же названием как и категории, у тегов другой смысл (структурировать статьи плоской таксономией). Иначе страница категории и тега имеет одинаковый title и считается поисковыми роботами <b>дублями одной страницы</b></li>
 	</ol>
 	';
 }
@@ -94,3 +95,19 @@ add_shortcode("wpdiscuz_comments", "my_wpdiscuz_shortcode");
 //fix autoptimize lazyload (style not allowed as child of element)
 add_filter( 'autoptimize_filter_imgopt_lazyload_cssoutput', '__return_false' );
 add_action( 'wp_head', function() { echo '<style>.lazyload,.lazyloading{opacity:0;}.lazyloaded{opacity:1;transition:opacity 300ms;}</style>'; }, 2147483647 );
+
+
+//redirect attachments to their page
+function conews_redirect_attachment_page() {
+    if ( is_attachment() ) {
+        global $post;
+        if ( $post && $post->post_parent ) {
+            wp_redirect( esc_url( get_permalink( $post->post_parent ) ), 301 );
+            exit;
+        } else {
+            wp_redirect( esc_url( home_url( '/' ) ), 301 );
+            exit;
+        }
+    }
+}
+add_action( 'template_redirect', 'conews_redirect_attachment_page' );

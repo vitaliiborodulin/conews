@@ -52,6 +52,10 @@
       // margin-bottom: 43px;
     }
 
+    &__number, &__name {
+      display: block;
+    }
+
     &__content--alter {
       display: block;
 
@@ -127,6 +131,10 @@
       .quiz__number {
         font-weight: 400;
         font-size: 15px;
+      }
+      .quiz__name {
+        max-width: 700px;
+        margin: 0 auto;
       }
     }
     
@@ -258,6 +266,16 @@
 
     input[type=range] {
       accent-color: #222222;
+    }
+
+    &__alert {
+      margin: 15px;
+      background-color: red;
+      color: yellow;
+      padding: 5px 10px;
+      text-align: center;
+      font-weight: bold;
+      opacity: 0.7;
     }
   
   }

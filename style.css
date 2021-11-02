@@ -12,7 +12,7 @@
 @font-face {
   font-family: 'Gilroy';
   src: url('assets/fonts/Gilroy-Regular.eot');
-  src: local('Gilroy Regular'), local('Gilroy-Regular'), url('assets/fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Gilroy-Regular.woff') format('woff'), url('assets/fonts/Gilroy-Regular.ttf') format('truetype');
+  src: local('Gilroy Regular'), local('Gilroy-Regular'), url('assets/fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Gilroy-Regular.woff2') format('woff2'), url('assets/fonts/Gilroy-Regular.woff') format('woff'), url('assets/fonts/Gilroy-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -21,7 +21,7 @@
 @font-face {
   font-family: 'Gilroy';
   src: url('assets/fonts/Gilroy-ExtraBold.eot');
-  src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'), url('assets/fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Gilroy-ExtraBold.woff') format('woff'), url('assets/fonts/Gilroy-ExtraBold.ttf') format('truetype');
+  src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'), url('assets/fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Gilroy-ExtraBold.woff2') format('woff2'), url('assets/fonts/Gilroy-ExtraBold.woff') format('woff'), url('assets/fonts/Gilroy-ExtraBold.ttf') format('truetype');
   font-weight: 800;
   font-display: swap;
   font-style: normal;
@@ -30,7 +30,7 @@
 @font-face {
   font-family: 'Raleway';
   src: url('assets/fonts/Raleway-SemiBold.eot');
-  src: url('assets/fonts/Raleway-SemiBold.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Raleway-SemiBold.woff') format('woff'), url('assets/fonts/Raleway-SemiBold.ttf') format('truetype');
+  src: url('assets/fonts/Raleway-SemiBold.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Raleway-SemiBold.woff2') format('woff2'), url('assets/fonts/Raleway-SemiBold.woff') format('woff'), url('assets/fonts/Raleway-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-display: swap;
   font-style: normal;
@@ -481,12 +481,7 @@ header {
   transition: all 0.3s ease;
 }
 
-.swiper-slide-active {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.swiper-slide-active .swiper-btn {
+.swiper-slide .swiper-btn {
   display: block;
 }
 
@@ -679,6 +674,7 @@ header {
   position: relative;
   margin-bottom: 50px;
   overflow: hidden;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease;
 }
 
@@ -2495,6 +2491,11 @@ p.ez-toc-title::before {
   justify-content: center;
 }
 
+.quiz__number,
+.quiz__name {
+  display: block;
+}
+
 .quiz__content--alter {
   display: block;
 }
@@ -2559,6 +2560,11 @@ p.ez-toc-title::before {
 .quiz__question--alt .quiz__number {
   font-weight: 400;
   font-size: 15px;
+}
+
+.quiz__question--alt .quiz__name {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .quiz__image {
@@ -2669,6 +2675,16 @@ p.ez-toc-title::before {
 
 .quiz input[type=range] {
   accent-color: #222222;
+}
+
+.quiz__alert {
+  margin: 15px;
+  background-color: red;
+  color: yellow;
+  padding: 5px 10px;
+  text-align: center;
+  font-weight: bold;
+  opacity: 0.7;
 }
 
 .page-id-15811 .quiz h2 {
@@ -2971,11 +2987,6 @@ input[name="your-acceptance"] {
 
   .slider {
     background: url(assets/images/svg/slider-bottom-dots.svg) no-repeat 160px bottom;
-  }
-
-  .swiper-slide-active {
-    -webkit-transform: none;
-            transform: none;
   }
 
   .swiper-btn {

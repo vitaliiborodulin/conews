@@ -5,6 +5,7 @@
   <meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php wp_head(); ?>
+  <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
   <style>.content__caption:before {content: '<?php echo mb_substr(get_the_title(),0,1); ?>';}</style>
 </head>
 

@@ -3,7 +3,9 @@
 add_action('wp_enqueue_scripts', function(){
   if ( is_front_page() && !is_paged()){
     wp_enqueue_style('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.css');
+    // wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css');
     wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', false, null, true);
+    // wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', false, null, true);
   }
   
 	wp_enqueue_style('style', get_stylesheet_uri());
@@ -36,5 +38,9 @@ add_action('wp_enqueue_scripts', function(){
 
   if(is_page( 16673 )){
     wp_enqueue_script('metabolism', get_template_directory_uri() . '/assets/js/metabolism.js', ['jquery'], null, true);
+  }
+
+  if(is_page( 17063 )){
+    wp_enqueue_script('metabolism', get_template_directory_uri() . '/assets/js/eysenck.js', ['jquery'], null, true);
   }
 });
