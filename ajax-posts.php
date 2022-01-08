@@ -31,6 +31,23 @@ elseif ( $template == 'homebeau' ) $loop = new WP_Query(array(
   'cat'            => 4
 ));
 
+// health cat на главной
+elseif ( $template == 'health' ) $loop = new WP_Query(array(
+	'posts_per_page' => $items,
+	'offset'         => $offset,
+  'order'          => 'DESC',
+  'cat'            => 123
+));
+
+// relations cat на главной
+elseif ( $template == 'relations' ) $loop = new WP_Query(array(
+	'posts_per_page' => $items,
+	'offset'         => $offset,
+  'order'          => 'DESC',
+  'cat'            => [195, -196]
+));
+
+
 // популярные на главной
 elseif ( $template == 'hpop' ) $loop = new WP_Query(array(
 	'posts_per_page' => $items,
@@ -66,7 +83,7 @@ if ( $loop->have_posts() ) :
         </div>
       </div>
     
-      <?php elseif ( $category && $template == 'homebeau' ): // шаблон вывода постов на главной cat beautiful ?>
+    <?php elseif ( $category && $template == 'homebeau' ): // шаблон вывода постов на главной cat beautiful ?>
   
         <div class="item">
           <div class="item__image">
@@ -80,7 +97,42 @@ if ( $loop->have_posts() ) :
             <h3 class="item__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
           </div>
         </div>
+
+		<?php elseif ( $category && $template == 'health' ): // шаблон вывода постов на главной cat health ?>
     
+			<div class="news__item">
+        <div class="news__image">
+          <?php if ( has_post_thumbnail()) { ?>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+              <?php the_post_thumbnail('nc_blog_first'); ?>
+            </a>
+          <?php } ?>
+        </div>
+        <div class="news__descr">
+          <h3 class="news__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+        </div>
+      </div>
+
+		<?php elseif ( $category && $template == 'relations' ): // шаблон вывода постов на главной cat health ?>
+    
+			<div class="news__item">
+				<div class="news__image">
+					<?php if ( has_post_thumbnail()) { ?>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+							<?php the_post_thumbnail('nc_blog_first'); ?>
+						</a>
+					<?php } ?>
+					<div class="news__category">
+						<a href="<?php $cat = get_the_category(); $catID = $cat[0]->cat_ID; echo get_category_link($catID); ?>">
+							<?php echo get_cat_name($catID) ?>
+						</a>
+					</div>
+				</div>
+				<div class="news__descr">
+					<h3 class="news__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				</div>
+			</div>
+
     <?php elseif ( $search ): ?>
   
       <div class="news__item">
@@ -139,7 +191,7 @@ if ( $loop->have_posts() ) :
         </div>
         <div class="news__descr">
           <h3 class="news__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-          <div class="news__date"><?php echo get_the_date(); ?></div>
+          <!-- <div class="news__date"><?php //echo get_the_date(); ?></div> -->
         </div>
       </div>
 

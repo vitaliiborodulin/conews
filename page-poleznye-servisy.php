@@ -14,6 +14,9 @@
       <?php while( have_posts() ) : the_post(); ?>
 
         <h1 class="section-caption content__caption">Полезные сервисы</h1>
+				<?php if(  wp_sitemaps_get_server()->sitemaps_enabled() ) {
+	echo 'ага, включены';
+} ?>
 
         <?php $posts = get_posts([
                 'numberposts' => -1,

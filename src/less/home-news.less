@@ -9,6 +9,45 @@
     }
   }
 
+	&__health {
+		.news__caption {
+			&::before {
+				content: 'З';
+				left: -36px;
+			}
+		}
+		.news__title {
+			margin-bottom: 0;
+		}
+	}
+
+	&__sport {
+		.news__caption {
+			&::before {
+				content: 'С';
+			}
+		}
+	}
+
+	&__relations {
+		.news__caption {
+			&::before {
+				content: 'О';
+			}
+		}
+		.news__title {
+			margin-bottom: 0;
+		}
+	}
+
+	&__insta {
+		.news__caption {
+			&::before {
+				content: 'И';
+			}
+		}
+	}
+
   &__content {
     .row-flex();
     .sm(justify-content, center);
@@ -31,6 +70,11 @@
       width: 100%;
       object-fit: cover;
       height: 100%;
+			transition: transform 1s ease;
+
+			&:hover {
+				transform: scale(1.1);
+			}
     }
   }
   

@@ -1,13 +1,13 @@
-<section class="news news__health">
+<section class="news news__sport">
   <div class="container">
-    <h2 class="section-caption news__caption">Здоровье</h2>
+    <h2 class="section-caption news__caption">Спорт</h2>
 
     <?php $loop = new WP_Query([
       'posts_per_page' => 8,
       'orderby'     => 'date',
       'order'       => 'DESC',
       'post_type'   => 'post',
-			'cat'            => 123
+			'cat'            => 18
     ]);?>
 
     <?php if ( $loop->have_posts() ) : ?>

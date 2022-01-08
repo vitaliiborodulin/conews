@@ -3,8 +3,8 @@
 
     <div class="beautiful__top">
 
-      <?php $loop_first = new WP_Query(array(
-          'posts_per_page' => 1,
+      <?php $loop = new WP_Query(array(
+          'posts_per_page' => 4,
           // 'offset'         => 1,
           // 'meta_key'       => 'views',
           // 'orderby'        => 'meta_value_num',
@@ -13,11 +13,11 @@
           'cat'            => 4
       )); ?>
 
-      <?php if ( $loop_first->have_posts() ) : ?>
+		<?php if ( $loop->have_posts() ) : ?>
 
-        <?php while ( $loop_first->have_posts() ) : $loop_first->the_post(); ?>
+			<?php while ( $loop->have_posts() ) : $loop->the_post(); if ($loop->current_post == 0): ?>
 
-          <div class="beautiful__top-left title-animation-idle">
+					<div class="beautiful__top-left title-animation-idle">
             <h2 class="section-caption beautiful__caption"><?php the_title(); ?></h2>
             <a href="<?php the_permalink(); ?>" class="btn btn-more btn-read beautiful__top-btn">Читать далее</a>
           </div>
@@ -31,29 +31,13 @@
             </div>
           </div>
 
-        <?php endwhile; ?>
+			<?php endif; endwhile; ?>
 
-      <?php endif; wp_reset_postdata(); ?>
+			<div class="beautiful__list">
 
-    </div>
+				<?php while ( $loop->have_posts() ) : $loop->the_post(); if ($loop->current_post > 0): ?>
 
-    <?php $loop_second = new WP_Query(array(
-        'posts_per_page' => 3,
-        'offset'         => 1,
-        // 'meta_key'       => 'views',
-        // 'orderby'        => 'meta_value_num',
-        'orderby'        => 'date',
-        'order'          => 'DESC',
-        'cat'            => 4
-    )); ?>
-
-    <?php if ( $loop_second->have_posts() ): ?>
-
-      <div class="beautiful__list">
-
-        <?php while ( $loop_second->have_posts() ): $loop_second->the_post(); ?>
-
-          <div class="item">
+					<div class="item">
             <div class="item__image">
               <?php if ( has_post_thumbnail()) : ?>
                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
@@ -66,22 +50,21 @@
             </div>
           </div>
 
-        <?php endwhile; ?>
+				<?php endif; endwhile; ?>
 
-      </div>
+			</div>
 
-      <?php if ( $loop_second->max_num_pages > 1 ) :	?>
+			<?php	if ( $loop->max_num_pages > 1 ): ?>
         <div class="more"><button class="btn btn-more"
-        data-items="3"
-        data-offset="3"
-        data-max="<?php echo $loop_second->found_posts; ?>"
-        data-cat="4"
-        data-template="homebeau"
+        data-items="4"
+        data-offset="4"
+        data-max="<?php echo $loop->found_posts; ?>" 
         data-theme="<?php echo get_template(); ?>"
+        data-template="hpop"
         data-loading="Загружаем...">Загрузить еще</button></div>
       <?php endif; ?>
 
-    <?php endif; wp_reset_postdata(); ?>
+		<?php endif; ?>
 
   </div>
 </section>

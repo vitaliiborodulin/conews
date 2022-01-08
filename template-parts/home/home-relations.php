@@ -1,13 +1,13 @@
-<section class="news news__health">
+<section class="news news__relations">
   <div class="container">
-    <h2 class="section-caption news__caption">Здоровье</h2>
+    <h2 class="section-caption news__caption">Отношения</h2>
 
     <?php $loop = new WP_Query([
       'posts_per_page' => 8,
       'orderby'     => 'date',
       'order'       => 'DESC',
       'post_type'   => 'post',
-			'cat'            => 123
+			'cat'            => [195, -196]
     ]);?>
 
     <?php if ( $loop->have_posts() ) : ?>
@@ -23,6 +23,11 @@
                   <?php the_post_thumbnail('nc_blog_first'); ?>
                 </a>
               <?php } ?>
+							<div class="news__category">
+								<a href="<?php $cat = get_the_category(); $catID = $cat[0]->cat_ID; echo get_category_link($catID); ?>">
+									<?php echo get_cat_name($catID) ?>
+								</a>
+							</div>
             </div>
             <div class="news__descr">
               <h3 class="news__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
@@ -38,8 +43,7 @@
         data-items="8"
         data-offset="8"
         data-max="<?php echo $loop->found_posts; ?>" 
-        data-cat="123"
-				data-template="health"
+				data-template="relations"
         data-theme="<?php echo get_template(); ?>"
         data-loading="Загружаем...">Загрузить еще</button></div>
       <?php endif; ?>

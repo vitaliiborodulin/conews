@@ -14,6 +14,10 @@
 	<?php get_template_part( 'template-parts/home/home-beautiful' ); ?>
 	<!-- end beautiful -->
 
+	<!-- new posts from relations rubric -->
+	<?php get_template_part( 'template-parts/home/home-relations' ); ?>
+	<!-- end relations -->
+
 	<!-- new posts from life rubric -->
 	<?php get_template_part( 'template-parts/home/home-life' ); ?>
 	<!-- end life -->
@@ -23,7 +27,11 @@
 	<!-- end popular -->
 
 	<!-- new posts from health rubric -->
-	<?php //get_template_part( 'template-parts/home/home-health' ); ?>
+	<?php get_template_part( 'template-parts/home/home-health' ); ?>
+	<!-- end health -->
+
+	<!-- new posts from sport rubric -->
+	<?php get_template_part( 'template-parts/home/home-sport' ); ?>
 	<!-- end health -->
 
 	<!-- instagram -->

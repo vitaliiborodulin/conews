@@ -38,15 +38,15 @@
 
     </div>
 
-    <?php	//if ( $wp_query->max_num_pages > 1 ) :	?>
+    <?php	if ( $loop->max_num_pages > 1 ):	?>
         <div class="more"><button class="btn btn-more"
         data-items="6"
         data-offset="6"
-        data-max="<?php echo 30 //$wp_query->found_posts; не корректно определяет максимум ?>" 
+        data-max="<?php echo $loop->found_posts; ?>" 
         data-theme="<?php echo get_template(); ?>"
         data-template="hpop"
         data-loading="Загружаем...">Загрузить еще</button></div>
-      <?php //endif; ?>
+      <?php endif; ?>
 
     <?php endif; wp_reset_postdata(); ?>
 

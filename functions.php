@@ -111,3 +111,43 @@ function conews_redirect_attachment_page() {
     }
 }
 add_action( 'template_redirect', 'conews_redirect_attachment_page' );
+
+// Дополним базовый robots.txt
+// -1 before wp-sitemap.xml
+// add_action( 'robots_txt', 'wp_kama_robots_txt_append', -1 );
+
+// function wp_kama_robots_txt_append( $output ){
+
+// 	$str = '
+// 	Disallow: /cgi-bin             # Стандартная папка на хостинге.
+// 	Disallow: /?                   # Все параметры запроса на главной.
+// 	Disallow: *?s=                 # Поиск.
+// 	Disallow: *&s=                 # Поиск.
+// 	Disallow: /search              # Поиск.
+// 	Disallow: /author/             # Архив автора.
+// 	Disallow: */embed              # Все встраивания.
+// 	Disallow: */xmlrpc.php         # Файл WordPress API
+// 	Disallow: *utm*=               # Ссылки с utm-метками
+// 	Disallow: *openstat=           # Ссылки с метками openstat
+// 	User-agent: Yandex
+// 	Clean-param: preview /dir/bookname
+// 	';
+
+// 	$str = trim( $str );
+// 	$str = preg_replace( '/^[\t ]+(?!#)/mU', '', $str );
+// 	$output .= "$str\n";
+
+// 	return $output;
+// }
+
+// remove users from sitemap
+// add_filter( 'wp_sitemaps_add_provider', 'truemisha_remove_user_sitemap', 25, 2 );
+ 
+// function truemisha_remove_user_sitemap( $provider, $name ) {
+ 
+// 	if ( 'users' === $name ) { // если архивы пользователей, то отключаем
+// 		return false;
+// 	}
+// 	return $provider;
+ 
+// }

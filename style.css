@@ -1076,6 +1076,31 @@ header {
   content: 'Н';
 }
 
+.news__health .news__caption::before {
+  content: 'З';
+  left: -36px;
+}
+
+.news__health .news__title {
+  margin-bottom: 0;
+}
+
+.news__sport .news__caption::before {
+  content: 'С';
+}
+
+.news__relations .news__caption::before {
+  content: 'О';
+}
+
+.news__relations .news__title {
+  margin-bottom: 0;
+}
+
+.news__insta .news__caption::before {
+  content: 'И';
+}
+
 .news__content {
   display: flex;
   flex-wrap: wrap;
@@ -1105,6 +1130,14 @@ header {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.news__item img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .news__image {
