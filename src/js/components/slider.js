@@ -23,6 +23,12 @@ if ($('body').hasClass('home')) {
                 // centeredSlides: true
             },
 
-        }
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            // dynamicBullets: true,
+            // type: 'fraction'
+        },
     });
 }

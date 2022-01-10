@@ -57,10 +57,10 @@
 
         </div>
 
-        <div class="comments">
+        <!-- <div class="comments">
           <h2 class="comments__title">Комментарии</h2>
-          <?php echo do_shortcode('[wpdiscuz_comments]'); ?>
-        </div>
+          <?php //echo do_shortcode('[wpdiscuz_comments]'); ?>
+        </div> -->
 
 
     </div>

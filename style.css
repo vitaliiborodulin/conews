@@ -334,25 +334,43 @@ header {
   color: #666666;
 }
 
-.arrowUpBtn {
-  display: none;
+#scroll-button {
   position: fixed;
-  right: 10px;
-  bottom: 10px;
-  width: 36px;
-  height: 36px;
+  right: 25px;
+  bottom: 40px;
+  z-index: 1099;
+  display: flex;
+  flex-direction: column;
+  width: 35px;
   text-align: center;
-  border-radius: 50%;
-  box-shadow: 0 0 5px #ffffff;
-  opacity: 0.5;
-  cursor: pointer;
-  z-index: 95;
-  transition: opacity 0.2s;
-  background: #ffffff no-repeat url(assets/images/svg/up-button.svg) center / contain;
 }
 
-.arrowUpBtn:hover {
+#scroll-button_up,
+#scroll-button_down {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#scroll-button_up svg,
+#scroll-button_down svg {
+  display: block;
+  margin: auto;
+  width: 14px;
+  height: 16px;
+}
+
+#scroll-button_up:hover,
+#scroll-button_down:hover {
   opacity: 1;
+}
+
+#scroll-button_middle {
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.5;
 }
 
 .header {
@@ -513,9 +531,9 @@ header {
   bottom: 0;
   width: 100%;
   padding-top: 85px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
   background: linear-gradient(180deg, rgba(83, 84, 82, 0) 14.93%, #333 90%);
 }
 
@@ -527,9 +545,8 @@ header {
   text-align: center;
   letter-spacing: 0.05em;
   color: #ffffff;
-  min-height: 48px;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
