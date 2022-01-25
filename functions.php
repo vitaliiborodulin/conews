@@ -60,6 +60,63 @@ function my_custom_dashboard_widgets() {
 	wp_add_dashboard_widget('custom_help_widget', 'Сообщение от разработчика', 'custom_dashboard_help');
 }
 
+add_filter( 'the_content', 'wpse_ad_content' );
+function wpse_ad_content( $content ) {
+        if( !is_single() )
+            return $content;
+
+            $paragraphAfter1 = 1; 
+            $paragraphAfter2 = 10; 
+
+            $content = explode ( "</p>", $content );
+            $new_content = '';
+                for ( $i = 0; $i < count ( $content ); $i ++ ) {
+                    if ( $i == $paragraphAfter1 ) {
+                    	$new_content .= '<div data-la-block="bd97edb2-9aeb-43bb-acb8-05a7b0d54305"></div>';
+                    	$new_content .= '
+											<amp-ad
+  layout="responsive"
+  width="318"
+  height="417"
+  type="luckyads"
+  data-la-block="bd97edb2-9aeb-43bb-acb8-05a7b0d54305"
+  src="https://zwrwdy.com/4po17l912ilv0pm30y/q8h687/vuq678kpy2lf.php"
+>
+</amp-ad>
+											';
+                    }
+										if ( $i == $paragraphAfter2 ) {
+                    	$new_content .= '<div data-la-block="8c1bd535-6733-479b-ad7f-62c610a35193"></div>';
+                    	$new_content .= '
+											<amp-ad
+  layout="responsive"
+  width="318"
+  height="398"
+  type="luckyads"
+  data-la-block="8c1bd535-6733-479b-ad7f-62c610a35193"
+  src="https://zwrwdy.com/mxs1l7912lvi/mp0y30hq8786qvu786pkynk7v0.php"
+>
+</amp-ad>';
+                    }
+										if ( $i == count ( $content ) - 1 ) {
+                    	$new_content .= '<div data-la-block="d2c4666e-f199-4661-910a-a877b12bc275"></div>';
+                    	$new_content .= '
+											<amp-ad
+  layout="responsive"
+  width="318"
+  height="378"
+  type="luckyads"
+  data-la-block="d2c4666e-f199-4661-910a-a877b12bc275"
+  src="https://zwrwdy.com/wye17l912ilvpm003y/h8q867vuq786kpy7sd.php"
+>
+</amp-ad>
+											';
+                    }
+            $new_content .= $content[$i] . "</p>";
+            }
+            return $new_content;
+    }
+
 function custom_dashboard_help() {
 	echo '<p style="background-color: red; color: white">Полезная информация:<p>
 	<ol>

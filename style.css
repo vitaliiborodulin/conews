@@ -480,7 +480,7 @@ header {
 .slider {
   padding-top: 15px;
   padding-bottom: 62px;
-  background: url(assets/images/svg/slider-bottom-dots.svg) no-repeat 60% bottom;
+  background: url(assets/images/svg/slider-bottom-dots.svg) no-repeat 80% bottom;
 }
 
 .swiper-container {
@@ -491,6 +491,11 @@ header {
   padding-bottom: 25px;
   margin: 0 auto;
   overflow-x: hidden;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #f6e3e4;
 }
 
 .swiper-slide {
@@ -1762,6 +1767,7 @@ header {
   padding-top: 60px;
   padding-bottom: 90px;
   background: #ffffff url(assets/images/svg/footer-points.svg) no-repeat 90% bottom;
+  overflow-x: hidden;
 }
 
 .footer__content {
@@ -1841,6 +1847,10 @@ header {
 .footer__form {
   box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.1);
   max-width: 325px;
+}
+
+.footer__form p {
+  max-width: 100%;
 }
 
 .footer__menu li {
@@ -2892,10 +2902,18 @@ input[name="your-acceptance"] {
     margin-right: 0;
   }
 
+  .slider {
+    background: url(assets/images/svg/slider-bottom-dots.svg) no-repeat 80% 88%;
+  }
+
   .swiper-container {
     padding-top: 0;
     padding-bottom: 0;
     height: 288px;
+  }
+
+  .swiper-pagination {
+    bottom: -20px !important;
   }
 
   .swiper-slide {
@@ -3033,10 +3051,6 @@ input[name="your-acceptance"] {
 @media screen and (max-width: 414px) {
   .btn-submit {
     padding: 6px;
-  }
-
-  .slider {
-    background: url(assets/images/svg/slider-bottom-dots.svg) no-repeat 160px bottom;
   }
 
   .swiper-btn {
