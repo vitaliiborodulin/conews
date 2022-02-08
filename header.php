@@ -42,7 +42,7 @@
 
       <div>
         <a href="<?php echo home_url(); ?>" class="header__logo">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/svg/logo.svg" alt="" width="219" height="101">
+          <img src="<?php bloginfo('template_url'); ?>/assets/images/svg/logo-1.svg" alt="" width="219" height="101">
         </a>
         <div class="header__soc">
           <a href="https://www.instagram.com/newscosmetology/" title="Instagram" target="_blank">

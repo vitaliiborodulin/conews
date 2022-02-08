@@ -384,12 +384,21 @@ header {
   align-items: center;
 }
 
+.header__logo {
+  display: block;
+}
+
 .header__soc {
   text-align: center;
   padding: 5px 0;
 }
 
 .header__soc a {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  box-shadow: 0px 0px 7px rgba(47, 43, 50, 0.2);
+  border-radius: 5px;
   text-decoration: none;
 }
 
@@ -1342,6 +1351,7 @@ header {
 .bpopular__item {
   display: flex;
   margin-bottom: 15px;
+  padding: 5px;
   transition: all 0.5s ease;
 }
 
@@ -1646,6 +1656,14 @@ header {
   margin-bottom: 16px;
 }
 
+.single .wp-block-columns {
+  display: block;
+}
+
+.single .wp-block-column {
+  margin-left: 0!important;
+}
+
 .same {
   padding: 40px 0;
 }
@@ -1839,18 +1857,21 @@ header {
 }
 
 .footer__slogan {
-  font-weight: 800;
-  margin-bottom: 30px;
-  font-size: 18px;
+  margin-bottom: 18px;
 }
 
-.footer__form {
-  box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.1);
-  max-width: 325px;
+.footer__slogan--first {
+  margin-bottom: 8px;
+  font-weight: 800;
+  font-size: 18px;
 }
 
 .footer__form p {
   max-width: 100%;
+}
+
+.footer .your-email {
+  box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.1);
 }
 
 .footer__menu li {
