@@ -39,10 +39,14 @@
   &__logo {
     display: inline-block;
   }
+
+	&__logo--b {
+		display: none;
+	}
   
   &__soc {
     margin-bottom: 47px;
-    margin-left: 65px;
+    margin-left: 100px;
     padding: 5px 0;
     .sm(margin-bottom, 60px);
 
@@ -105,4 +109,18 @@
       }
     }
   }
+}
+
+.dark {
+	.footer {
+		color: #fff;
+		background-color: #000;
+
+		&__logo--w {
+			display: none;
+		}
+		&__logo--b {
+			display: block;
+		}
+	}
 }

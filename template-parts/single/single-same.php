@@ -1,10 +1,9 @@
 <section class="same">
   <div class="container">
-    <h2 class="section-caption same__caption title-animation-idle">Читайте также</h2>
+		
+		<?php $categories = get_the_category($post->ID);
 
-    <?php $categories = get_the_category($post->ID);
-
-    if ($categories) {
+if ($categories) {
       $category_ids = array();
       foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id; 
 
@@ -15,8 +14,10 @@
         'ignore_sticky_posts'=> 1, //было caller_get_posts,
         'orderby'  => 'rand'
       ]); 
-
+			
       if( $loop->have_posts() ) { ?>
+			
+				<h2 class="section-caption same__caption title-animation-idle">Читайте также</h2>
 
         <div class="same__list">
 

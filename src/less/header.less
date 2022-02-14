@@ -23,6 +23,10 @@
     }
   }
 
+	&__logo--b {
+		display: none;
+	}
+
   &__soc {
     text-align: center;
     padding: 5px 0;
@@ -122,4 +126,20 @@
       background-color: darken(@accent, 10%);
     }
   }
+}
+
+.dark {
+	.header {
+		&__menu-toggle {
+			svg path{
+				fill: #fff;
+			}
+		}
+		&__logo--w {
+			display: none;
+		}
+		&__logo--b {
+			display: block;
+		}
+	}
 }

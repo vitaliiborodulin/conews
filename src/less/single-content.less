@@ -164,3 +164,33 @@
 		margin-left: 0!important;
 	}
 }
+
+// прогресс чтения
+.single {
+	.progressbar {
+    height: 5px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+	}
+
+	.progressbar>.progressbar-line {
+			height: 5px;
+			width: 0;
+			background: #dc3232;
+	}
+}
+
+.dark {
+	.content {
+		&__entry {
+			.final {
+				color: #000;
+			}
+		}
+	}
+}

@@ -27,6 +27,8 @@
         //= components/ajaxPost.js
         //= components/share.js
         //= components/slider.js
+        //= components/progress.js
+        //= components/themeToggle.js
         //= components/upBtn.js
 
     });

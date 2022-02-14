@@ -188,3 +188,21 @@
   }
 
 }
+
+.dark {
+	.life {
+		&__caption::before {
+			color: @black;
+		}
+		&__list {
+			a {
+				color: #000;
+			}
+		}
+		&__card {
+			background-color: #000;
+			background-image: url(assets/images/svg/right-w.svg);
+			border: 1px solid @accent_dark;
+		}
+	}
+}

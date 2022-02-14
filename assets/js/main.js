@@ -207,6 +207,49 @@
                 },
             });
         }
+        if ($('body').hasClass('single')) {
+            let fullHeight, innerHeight;
+            const progressBar = document.querySelector('.progressbar>.progressbar-line');
+        
+            window.addEventListener('scroll', fillProgressLine);
+            window.addEventListener('resize', fillProgressLine);
+        
+            function fillProgressLine() {
+                fullHeight = document.body.scrollHeight;
+                innerHeight = window.innerHeight;
+                progressBar.style.width = (pageYOffset * 100 / (fullHeight - innerHeight)) + '%';
+            }
+        
+            fillProgressLine();
+        }
+        const themeSelectors = document.querySelectorAll('.themetoggle');
+        
+        themeSelectors.forEach(elem => {
+            elem.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (localStorage.getItem('theme') === 'dark') {
+                    localStorage.removeItem('theme');
+                } else {
+                    localStorage.setItem('theme', 'dark')
+                }
+                addDarkClassToHTML()
+            });
+        })
+        
+        
+        function addDarkClassToHTML() {
+            try {
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.querySelector('html').classList.add('dark');
+                    // document.querySelector('.themetoggle span').textContent = 'dm';
+                } else {
+                    document.querySelector('html').classList.remove('dark');
+                    // document.querySelector('.themetoggle span').textContent = 'lm';
+                }
+            } catch (err) {}
+        }
+        
+        addDarkClassToHTML();
         //body arrow up - see btn.less for customizing
         // $('<div>').addClass('arrowUpBtn').attr('title', 'Вернуться к началу').appendTo('body');
         
