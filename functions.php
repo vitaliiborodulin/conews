@@ -150,8 +150,8 @@ function my_wpdiscuz_shortcode() {
 add_shortcode("wpdiscuz_comments", "my_wpdiscuz_shortcode");
 
 //fix autoptimize lazyload (style not allowed as child of element)
-add_filter( 'autoptimize_filter_imgopt_lazyload_cssoutput', '__return_false' );
-add_action( 'wp_head', function() { echo '<style>.lazyload,.lazyloading{opacity:0;}.lazyloaded{opacity:1;transition:opacity 300ms;}</style>'; }, 2147483647 );
+// add_filter( 'autoptimize_filter_imgopt_lazyload_cssoutput', '__return_false' );
+// add_action( 'wp_head', function() { echo '<style>.lazyload,.lazyloading{opacity:0;}.lazyloaded{opacity:1;transition:opacity 300ms;}</style>'; }, 2147483647 );
 
 
 //redirect attachments to their page

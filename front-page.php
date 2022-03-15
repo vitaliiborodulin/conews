@@ -18,6 +18,10 @@
 	<?php get_template_part( 'template-parts/home/home-relations' ); ?>
 	<!-- end relations -->
 
+	<!-- new posts from sex rubric -->
+	<?php get_template_part( 'template-parts/home/home-sex' ); ?>
+	<!-- end sex -->
+
 	<!-- new posts from life rubric -->
 	<?php get_template_part( 'template-parts/home/home-life' ); ?>
 	<!-- end life -->

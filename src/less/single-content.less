@@ -112,6 +112,9 @@
 .content {
   &__entry {
 
+    max-width: 740px;
+    margin: 0 auto;
+
     h1,
     h1 strong,
     h2 strong {
@@ -121,6 +124,10 @@
       line-height   : 19px;
       letter-spacing: .05em;
     }
+  }
+
+  ul {
+    margin: 1em 0;
   }
 }
 
@@ -156,14 +163,14 @@
 }
 
 // выключим две колонки в статьях
-.single {
+// .single {
 	.wp-block-columns {
 		display: block;
 	}
 	.wp-block-column {
 		margin-left: 0!important;
 	}
-}
+// }
 
 // прогресс чтения
 .single {

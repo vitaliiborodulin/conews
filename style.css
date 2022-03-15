@@ -687,6 +687,14 @@ header {
   height: 79px;
 }
 
+.beautiful .sex__caption {
+  margin-bottom: 78px;
+}
+
+.beautiful .sex__caption::before {
+  content: 'С';
+}
+
 .beautiful__top {
   position: relative;
   margin-bottom: 124px;
@@ -1757,6 +1765,11 @@ header {
   margin-bottom: 5px;
 }
 
+.content__entry {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
 .content__entry h1,
 .content__entry h1 strong,
 .content__entry h2 strong {
@@ -1765,6 +1778,10 @@ header {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.05em;
+}
+
+.content ul {
+  margin: 1em 0;
 }
 
 .content__entry .wp-block-embed-youtube {
@@ -1789,11 +1806,11 @@ header {
   margin-bottom: 16px;
 }
 
-.single .wp-block-columns {
+.wp-block-columns {
   display: block;
 }
 
-.single .wp-block-column {
+.wp-block-column {
   margin-left: 0!important;
 }
 
@@ -1846,6 +1863,12 @@ header {
   position: relative;
   margin-bottom: 20px;
   overflow: hidden;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+
+.same__item:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
 .same__item a {
@@ -1886,7 +1909,7 @@ header {
   background-color: #ffffff;
   width: 75%;
   padding-top: 13px;
-  padding-bottom: 0;
+  padding-bottom: 10px;
   padding-left: 15px;
   padding-right: 25px;
 }
@@ -1993,12 +2016,17 @@ header {
 
 .footer__soc {
   margin-bottom: 47px;
-  margin-left: 100px;
+  margin-left: 60px;
   padding: 5px 0;
 }
 
 .footer__soc a {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 5px;
   text-decoration: none;
+  box-shadow: 0px 0px 7px rgba(47, 43, 50, 0.2);
 }
 
 .footer__soc a:first-child svg:hover {
@@ -2093,6 +2121,55 @@ header {
 
 .share > li + li {
   margin-left: 10px;
+}
+
+.share__theme {
+  display: flex;
+}
+
+.share__switch {
+  position: relative;
+  display: inline-block;
+  width: 39px;
+  height: 23px;
+  margin: 0 2px;
+}
+
+.share__switch input {
+  display: none;
+}
+
+.share__switch input:checked + .share__slider {
+  background-color: #F6E3E4;
+}
+
+.share__switch input:checked + .share__slider:before {
+  -webkit-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+.share__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.share__slider::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
 }
 
 .footer .share {
@@ -3402,8 +3479,8 @@ input[name="your-acceptance"] {
   }
 
   .footer .share {
-    top: 99px;
-    left: 0;
+    top: 128px;
+    left: 30px;
     right: unset;
   }
 
