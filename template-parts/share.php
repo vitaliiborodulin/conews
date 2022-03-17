@@ -27,7 +27,7 @@
 			</svg>
 		</a>
     <div class="popup form subscribe__form subscribe__popup">
-      <?php echo do_shortcode('[contact-form-7 id="10" title="Контактная форма в подвале"]') ?>
+      <?php //echo do_shortcode('[contact-form-7 id="10" title="Контактная форма в подвале"]') ?>
     </div>
   </li> -->
   <!-- <li>

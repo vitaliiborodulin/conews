@@ -1830,7 +1830,8 @@ header {
   background: #dc3232;
 }
 
-.dark .content__entry .final {
+.dark .content__entry .final,
+.dark .content__entry .final2 {
   color: #000;
 }
 
