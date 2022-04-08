@@ -16,7 +16,7 @@
   <?php if ( $loop->have_posts() ) : ?>
 
     <!-- Slider main container -->
-    <div class="swiper-container">
+    <div class="slider__home swiper-container">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->

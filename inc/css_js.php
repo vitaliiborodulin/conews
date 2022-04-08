@@ -1,14 +1,14 @@
 <?php
 
 add_action('wp_enqueue_scripts', function(){
-  if ( is_front_page() && !is_paged()){
+  // if ( is_front_page() && !is_paged()){
     // wp_enqueue_style('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.css');
     wp_enqueue_style('swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.css');
     // wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css');
     // wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', false, null, true);
     wp_enqueue_script( 'swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js', false, null, true);
     // wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', false, null, true);
-  }
+  // }
   
 	wp_enqueue_style('style', get_stylesheet_uri());
 

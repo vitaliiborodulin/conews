@@ -39,7 +39,7 @@
 	<!-- end health -->
 
 	<!-- instagram -->
-	<?php get_template_part( 'template-parts/home/home-instagram' ); ?>
+	<?php //get_template_part( 'template-parts/home/home-instagram' ); ?>
 	<!-- end instagram -->
 
 	<!-- get all tags -->

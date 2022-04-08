@@ -43,8 +43,12 @@
       &:first-child svg:hover {
         fill: red;
       }
+      &:nth-child(2) path:nth-child(2) {
+        fill: #fff;
+      }
       &:nth-child(2) svg:hover {
-        fill: blue;
+        // fill: blue;
+        fill: red;
       }
       &:nth-child(3) svg:hover {
         fill: cornflowerblue;
@@ -141,5 +145,16 @@
 		&__logo--b {
 			display: block;
 		}
+
+    &__soc {
+      a {
+        &:nth-child(2) path:nth-child(2) {
+          fill: #000;
+        }
+        &:nth-child(4) svg:hover {
+          fill: #fff;
+        }
+      }
+    }
 	}
 }

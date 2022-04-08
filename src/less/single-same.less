@@ -9,19 +9,20 @@
   }
 
   &__list {
-    .row-flex();
+    position: relative;
+  //   .row-flex();
   }
 
   &__item {
-    .col();
-    .size(4);
-    .size-md(6);
-    .size-sm(12);
-    height: 300px;
+    // .col();
+    // .size(4);
+    // .size-md(6);
+    // .size-sm(12);
+    // height: 300px;
     position: relative;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     overflow: hidden;
-		box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     .card-shadow();
 
     a {
@@ -97,6 +98,30 @@
       }
     }
   }
+
+  .swiper-container {
+    width: 100%;
+    max-width: 1440px;
+    height: 450px;
+    padding: 0 5px 25px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    .md-block({
+      padding-top: 0;
+      // padding-bottom: 15px;
+      height: 288px;
+    });
+  }
+
+  .swiper-slide {
+    position: relative;
+    // width: 300px;
+    // height: 400px;
+    // .md(height, 288px);
+    transition: all 0.3s ease;
+    padding: 10px;
+  }
+
 }
 
 .dark {
@@ -109,4 +134,8 @@
 			background-color: #000;
 		}
 	}
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: @red;
 }
