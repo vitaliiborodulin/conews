@@ -44,41 +44,13 @@
 		display: none;
 	}
   
-  &__soc {
+  .socials {
     margin-bottom: 47px;
     margin-left: 60px;
-    padding: 5px 0;
     .sm(margin-bottom, 60px);
 
-    a {
-			width: 20px;
-			height: 20px;
-			display: inline-block;
-			border-radius: 5px;
-      text-decoration: none;
-			box-shadow: 0px 0px 7px rgba(47, 43, 50, 0.2);
-      
-      &:first-child svg:hover {
-        fill: red;
-      }
-      &:nth-child(2) path:nth-child(2) {
-        fill: #fff;
-      }
-      &:nth-child(2) svg:hover {
-        // fill: blue;
-        fill: red;
-      }
-      &:nth-child(3) svg:hover {
-        fill: cornflowerblue;
-      }
-      &:nth-child(4) svg:hover {
-        fill: black
-      }
-    }
-
-    svg { 
-      fill: @accent;
-      transition: all 0.3s ease;
+    &__insta, &__fb {
+      display: none;
     }
   }
 
@@ -131,16 +103,5 @@
 		&__logo--b {
 			display: block;
 		}
-
-    &__soc {
-      a {
-        &:nth-child(2) path:nth-child(2) {
-          fill: #000;
-        }
-        &:nth-child(4) svg:hover {
-          fill: #fff;
-        }
-      }
-    }
 	}
 }

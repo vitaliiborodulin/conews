@@ -1,0 +1,46 @@
+.socials {
+    padding: 5px 0;
+
+    a {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        box-shadow: 0px 0px 7px rgba(47, 43, 50, 0.2);
+        border-radius: 5px;
+        text-decoration: none;
+      
+      // &:first-child svg:hover {
+      //   fill: red;
+      // }
+      // &:nth-child(2) path:nth-child(2) {
+      //   fill: #fff;
+      // }
+      // &:nth-child(2) svg:hover {
+      //   fill: red;
+      // }
+      // &:nth-child(3) svg:hover {
+      //   fill: cornflowerblue;
+      // }
+      // &:nth-child(4) svg:hover {
+      //   fill: black
+      // }
+    }
+
+    // svg { 
+    //   fill: @accent;
+    //   transition: all 0.3s ease;
+    // }
+  }
+
+  .dark {
+    .socials {
+      a {
+        &:nth-child(2) path:nth-child(2) {
+          fill: #000;
+        }
+        &:nth-child(6) svg {
+          fill: #fff;
+        }
+      }
+    }
+  }

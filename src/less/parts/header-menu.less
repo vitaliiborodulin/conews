@@ -92,11 +92,15 @@
 
 .menu a {
   display: block;
-  padding: 14px 20px 16px;
+  // padding: 14px 20px 16px;
+  padding: 8px 20px 10px;
   color: @black;
   text-decoration: none;
-  &:hover {
-    text-decoration: underline;
+  transition: background-color 0.3s ease;
+
+  &:hover, &:active, &:focus {
+    // text-decoration: underline;
+    background-color: @accent;
   }
 }
 
@@ -191,7 +195,7 @@
 
 .menu__show-submenu {
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
   bottom: 0;
   width: 50px;
@@ -199,6 +203,7 @@
   cursor: pointer;
   // border-left: 1px solid rgba(255,255,255,.04);
   // background: rgba(255,255,255,.06);
+  transform: translateY(-50%);
 }
 
 .menu-pulse {
@@ -276,4 +281,28 @@
   transform: rotate(45deg)
 }
 
+.menu__soc {
+  position: absolute;
+  bottom: 5%;
+  z-index: 1000;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
 
+.menu__soc h2 {
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.menu__soc .socials {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menu__soc a {
+  display: inline-block;
+  // margin: 0 10px;
+  padding: 0px!important;
+  box-shadow: none;
+}

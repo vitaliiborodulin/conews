@@ -27,40 +27,11 @@
 		display: none;
 	}
 
-  &__soc {
+  .socials {
     text-align: center;
-    padding: 5px 0;
 
-    a {
-			width: 20px;
-			height: 20px;
-			display: inline-block;
-			box-shadow: 0px 0px 7px rgba(47, 43, 50, 0.2);
-			border-radius: 5px;
-
-      text-decoration: none;
-      
-      &:first-child svg:hover {
-        fill: red;
-      }
-      &:nth-child(2) path:nth-child(2) {
-        fill: #fff;
-      }
-      &:nth-child(2) svg:hover {
-        // fill: blue;
-        fill: red;
-      }
-      &:nth-child(3) svg:hover {
-        fill: cornflowerblue;
-      }
-      &:nth-child(4) svg:hover {
-        fill: black
-      }
-    }
-
-    svg { 
-      fill: @accent;
-      transition: all 0.3s ease;
+    &__insta, &__fb {
+      display: none;
     }
   }
 
@@ -74,30 +45,28 @@
   }
 }
 
-.header__subscribe {
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
+// .header__subscribe {
+//   position: absolute;
+//   bottom: 0;
+//   z-index: 1;
 
-  padding: 22px;
-  background: @accent url(assets/images/svg/menu-dots.svg) no-repeat right center;
-}
+//   padding: 22px;
+//   background: @accent url(assets/images/svg/menu-dots.svg) no-repeat right center;
+
+//   form {
+//     display: flex;
+//     background: @white;
+//     padding: 2px;
+//   }
+//   .form__input {
+//     font-size: 14px;
+//   }
+// }
 
 .header__slogan {
   margin-bottom: 14px;
   font-size: 14px;
   line-height: 16px;
-}
-
-.header__subscribe {
-  form {
-    display: flex;
-    background: @white;
-    padding: 2px;
-  }
-  .form__input {
-    font-size: 14px;
-  }
 }
 
 .header__search {
@@ -145,16 +114,5 @@
 		&__logo--b {
 			display: block;
 		}
-
-    &__soc {
-      a {
-        &:nth-child(2) path:nth-child(2) {
-          fill: #000;
-        }
-        &:nth-child(4) svg:hover {
-          fill: #fff;
-        }
-      }
-    }
 	}
 }

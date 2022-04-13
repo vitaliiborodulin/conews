@@ -435,43 +435,13 @@ header {
   display: none;
 }
 
-.header__soc {
+.header .socials {
   text-align: center;
-  padding: 5px 0;
 }
 
-.header__soc a {
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  box-shadow: 0px 0px 7px rgba(47, 43, 50, 0.2);
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.header__soc a:first-child svg:hover {
-  fill: red;
-}
-
-.header__soc a:nth-child(2) path:nth-child(2) {
-  fill: #fff;
-}
-
-.header__soc a:nth-child(2) svg:hover {
-  fill: red;
-}
-
-.header__soc a:nth-child(3) svg:hover {
-  fill: cornflowerblue;
-}
-
-.header__soc a:nth-child(4) svg:hover {
-  fill: black;
-}
-
-.header__soc svg {
-  fill: #F6E3E4;
-  transition: all 0.3s ease;
+.header .socials__insta,
+.header .socials__fb {
+  display: none;
 }
 
 .header__menu-toggle {
@@ -481,28 +451,10 @@ header {
   cursor: pointer;
 }
 
-.header__subscribe {
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
-  padding: 22px;
-  background: #F6E3E4 url(assets/images/svg/menu-dots.svg) no-repeat right center;
-}
-
 .header__slogan {
   margin-bottom: 14px;
   font-size: 14px;
   line-height: 16px;
-}
-
-.header__subscribe form {
-  display: flex;
-  background: #ffffff;
-  padding: 2px;
-}
-
-.header__subscribe .form__input {
-  font-size: 14px;
 }
 
 .header__search {
@@ -547,14 +499,6 @@ header {
 
 .dark .header__logo--b {
   display: block;
-}
-
-.dark .header__soc a:nth-child(2) path:nth-child(2) {
-  fill: #000;
-}
-
-.dark .header__soc a:nth-child(4) svg:hover {
-  fill: #fff;
 }
 
 .slider {
@@ -2037,44 +1981,14 @@ header {
   display: none;
 }
 
-.footer__soc {
+.footer .socials {
   margin-bottom: 47px;
   margin-left: 60px;
-  padding: 5px 0;
 }
 
-.footer__soc a {
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  border-radius: 5px;
-  text-decoration: none;
-  box-shadow: 0px 0px 7px rgba(47, 43, 50, 0.2);
-}
-
-.footer__soc a:first-child svg:hover {
-  fill: red;
-}
-
-.footer__soc a:nth-child(2) path:nth-child(2) {
-  fill: #fff;
-}
-
-.footer__soc a:nth-child(2) svg:hover {
-  fill: red;
-}
-
-.footer__soc a:nth-child(3) svg:hover {
-  fill: cornflowerblue;
-}
-
-.footer__soc a:nth-child(4) svg:hover {
-  fill: black;
-}
-
-.footer__soc svg {
-  fill: #F6E3E4;
-  transition: all 0.3s ease;
+.footer .socials__insta,
+.footer .socials__fb {
+  display: none;
 }
 
 .footer__slogan {
@@ -2121,14 +2035,6 @@ header {
 
 .dark .footer__logo--b {
   display: block;
-}
-
-.dark .footer__soc a:nth-child(2) path:nth-child(2) {
-  fill: #000;
-}
-
-.dark .footer__soc a:nth-child(4) svg:hover {
-  fill: #fff;
 }
 
 .ya-share2 {
@@ -2267,6 +2173,27 @@ header {
 
 .dark .share a {
   color: #fff;
+}
+
+.socials {
+  padding: 5px 0;
+}
+
+.socials a {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  box-shadow: 0px 0px 7px rgba(47, 43, 50, 0.2);
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.dark .socials a:nth-child(2) path:nth-child(2) {
+  fill: #000;
+}
+
+.dark .socials a:nth-child(6) svg {
+  fill: #fff;
 }
 
 .breadcrumbs {
@@ -2479,13 +2406,16 @@ p.ez-toc-title::before {
 
 .menu a {
   display: block;
-  padding: 14px 20px 16px;
+  padding: 8px 20px 10px;
   color: #000;
   text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.menu a:hover {
-  text-decoration: underline;
+.menu a:hover,
+.menu a:active,
+.menu a:focus {
+  background-color: #F6E3E4;
 }
 
 .dark .menu a {
@@ -2583,12 +2513,14 @@ p.ez-toc-title::before {
 
 .menu__show-submenu {
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
   bottom: 0;
   width: 50px;
   height: 50px;
   cursor: pointer;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .menu-pulse::after {
@@ -2666,6 +2598,31 @@ p.ez-toc-title::before {
 .menu__close:after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.menu__soc {
+  position: absolute;
+  bottom: 5%;
+  z-index: 1000;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.menu__soc h2 {
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.menu__soc .socials {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menu__soc a {
+  display: inline-block;
+  padding: 0px!important;
+  box-shadow: none;
 }
 
 .header__bottom {
@@ -3506,7 +3463,7 @@ input[name="your-acceptance"] {
     width: calc(100% - 20px);
   }
 
-  .footer__soc {
+  .footer .socials {
     margin-bottom: 60px;
   }
 
