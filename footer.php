@@ -1,11 +1,14 @@
-<footer class="footer">
+<footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+  <meta itemprop="copyrightYear" content="<?php date("Y") ?>">
+  <meta itemprop="copyrightHolder" content="Newscosmetology.com">
+
 	<div class="container">
 		<div class="footer__content">
 			
       <div class="footer__left">
         <a class="footer__logo" href="<?php echo home_url(); ?>">
-					<img class="footer__logo--w" src="<?php bloginfo('template_url'); ?>/assets/images/svg/logo-1.svg" alt="" width="219" height="101">
-          <img class="footer__logo--b" src="<?php bloginfo('template_url'); ?>/assets/images/svg/logo-b.svg" alt="" width="219" height="101">
+					<img class="footer__logo--w" src="<?php bloginfo('template_url'); ?>/assets/images/svg/logo-2.svg" alt="" width="201" height="101">
+          <img class="footer__logo--b" src="<?php bloginfo('template_url'); ?>/assets/images/svg/logo-2b.svg" alt="" width="201" height="101">
         </a>
 
         <!-- socials -->

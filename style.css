@@ -211,6 +211,11 @@ a {
   margin: -1px;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Gilroy', sans-serif;
   font-size: 14px;
@@ -219,6 +224,7 @@ body {
   min-width: 320px;
   position: relative;
   letter-spacing: 0.05em;
+  text-rendering: optimizeSpeed;
 }
 
 html.dark,
@@ -271,6 +277,8 @@ header {
 .dark .section-caption {
   color: #fff;
 }
+
+/* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
 
 .btn {
   text-decoration: none;
@@ -359,7 +367,7 @@ header {
 #scroll-button {
   position: fixed;
   right: 25px;
-  bottom: 40px;
+  bottom: 100px;
   z-index: 1099;
   display: flex;
   flex-direction: column;
@@ -1656,6 +1664,29 @@ header {
   top: 0;
 }
 
+.content__above {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.content__views {
+  margin-right: 10px;
+  padding-left: 30px;
+  background: url(assets/images/svg/views.svg) no-repeat left center;
+}
+
+.content__entry a {
+  color: #dc3232;
+  text-decoration: none;
+}
+
+.content__entry a:hover {
+  text-decoration: underline;
+}
+
 .content__entry h2,
 .content__entry p,
 .content__entry li,
@@ -1663,11 +1694,12 @@ header {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.05em;
-  text-align: justify;
+  text-align: left;
 }
 
 .content__entry li {
   text-align: left;
+  margin-bottom: 8px;
 }
 
 .content__entry h2 {
@@ -1678,6 +1710,10 @@ header {
 .content__entry p,
 .content__entry div {
   margin: 20px 0;
+}
+
+.content__entry iframe {
+  max-width: 100%;
 }
 
 .content__entry ul,
@@ -2196,30 +2232,30 @@ header {
   fill: #fff;
 }
 
-.breadcrumbs {
-  padding: 34px 0;
+.breadcrumbs,
+.aioseo-breadcrumbs {
+  padding: 34px 10px 34px 0;
   font-size: 14px;
   line-height: 16px;
 }
 
-.breadcrumbs a {
+.breadcrumbs a,
+.aioseo-breadcrumbs a {
   color: inherit;
   text-decoration: none;
 }
 
-.breadcrumbs a.home span {
+.breadcrumbs a:hover,
+.aioseo-breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs span:first-child,
+.aioseo-breadcrumbs span:first-child {
   background: url(assets/images/svg/home.svg) no-repeat;
   width: 15px;
   height: 14px;
   padding-left: 28px;
-}
-
-.breadcrumbs a:hover {
-  text-decoration: underline;
-}
-
-.breadcrumbs .sep {
-  padding: 0 5px;
 }
 
 .sep {
@@ -2561,6 +2597,7 @@ p.ez-toc-title::before {
 .menu__submenu.active {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+  max-height: 70vh;
 }
 
 .menu__submenu.hidden {
@@ -2602,16 +2639,17 @@ p.ez-toc-title::before {
 
 .menu__soc {
   position: absolute;
-  bottom: 5%;
+  bottom: 0;
   z-index: 1000;
   left: 0;
   width: 100%;
   text-align: center;
+  background-color: #ffffff;
 }
 
 .menu__soc h2 {
-  margin-bottom: 4px;
-  font-size: 12px;
+  margin-bottom: 5px;
+  font-size: 14px;
 }
 
 .menu__soc .socials {
@@ -3481,6 +3519,11 @@ input[name="your-acceptance"] {
     left: 0;
   }
 
+  .breadcrumbs,
+  .aioseo-breadcrumbs {
+    padding: 24px 5px 24px 0;
+  }
+
   .form__submit:not('.login__form .form__submit') {
     font-size: 0;
     padding: 0;
@@ -3506,8 +3549,25 @@ input[name="your-acceptance"] {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 @media (any-pointer: coarse) {
   .slider__text {
     pointer-events: none;
+  }
+}
+
+@media (pointer: coarse) and (orientation: landscape) {
+  .menu__submenu.active {
+    max-height: 60vh;
   }
 }

@@ -109,9 +109,10 @@ a {
   margin: -1px;
 }
 
-// html, body {
-//   scroll-behavior: smooth;
-// }
+html, body {
+  // scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body {
 	font-family: @userfont;
@@ -123,6 +124,7 @@ body {
   // min-height: 100vh;
   position: relative;
   letter-spacing: 0.05em;
+  text-rendering: optimizeSpeed;
 }
 
 html.dark, .dark body {
@@ -176,4 +178,14 @@ section, footer, header {
 	.section-caption {
 		color: #fff;
 	}
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

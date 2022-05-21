@@ -134,7 +134,7 @@ function custom_dashboard_help() {
 	';
 }
 
-include_once( 'inc/dimox_breadcrumbs.php' );
+// include_once( 'inc/dimox_breadcrumbs.php' );
 include_once( 'inc/kama_postviews.php');
 
 // wpdiscuz comments plugin shortcode
@@ -248,3 +248,33 @@ if( is_admin() ){
 	 */
 	add_filter( 'pre_site_transient_browser_'. md5( $_SERVER['HTTP_USER_AGENT'] ), '__return_empty_array' );
 }
+
+remove_action( 'wp_head', 'rsd_link' );
+remove_action( 'wp_head', 'wlwmanifest_link' );
+remove_action( 'wp_head', 'wp_shortlink_wp_head', 10 );// Короткая ссылка - без ЧПУ <link rel='shortlink'
+
+// remove default Duotones
+// remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
+
+//REMOVE GUTENBERG BLOCK LIBRARY CSS FROM LOADING ON FRONTEND
+function remove_wp_block_library_css(){
+	wp_dequeue_style( 'wp-block-library' );
+	wp_dequeue_style( 'wp-block-library-theme' );
+	wp_dequeue_style( 'wc-block-style' ); // REMOVE WOOCOMMERCE BLOCK CSS
+	wp_dequeue_style( 'global-styles' ); // REMOVE THEME.JSON
+	}
+add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css', 100 );
+
+// disable aioseo breadcrumbs
+// add_filter( 'aioseo_schema_output', 'aioseo_filter_schema_output' );
+
+// function aioseo_filter_schema_output( $graphs ) {
+
+//  	   foreach ( $graphs as $index => $graph ) {
+// 			if ( 'BreadcrumbList' === $graph['@type'] ) {
+// 				unset( $graphs[ $index ] );
+// 			}
+// 		}
+
+// 	return $graphs;
+// }

@@ -6,7 +6,18 @@
 
         <h1 class="section-caption content__caption"><?php the_title(); ?></h1>
 
-        <?php if ( function_exists('dimox_breadcrumbs') ) dimox_breadcrumbs(); ?>
+        <div class="content__above">
+          <?php if( function_exists( 'aioseo_breadcrumbs' ) ) aioseo_breadcrumbs(); ?>
+          
+          <div class="content__info">
+            <span class="content__views">
+              <?php echo get_post_meta( get_the_ID(), 'views', true ); ?>
+            </span>
+            <span class="content__time">
+              <?php echo get_the_time('j.m.Y, G:i') ?>
+            </span>
+          </div>
+        </div>
         
         <div class="content__entry">
 
