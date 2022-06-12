@@ -211,11 +211,6 @@ a {
   margin: -1px;
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
-
 body {
   font-family: 'Gilroy', sans-serif;
   font-size: 14px;
@@ -1799,7 +1794,7 @@ header {
 }
 
 .wp-block-columns {
-  display: block;
+  display: block!important;
 }
 
 .wp-block-column {
@@ -2262,88 +2257,18 @@ header {
   color: #CBCBCB;
 }
 
-.ez-toc-list li {
-  list-style: none;
-  margin-bottom: 25px;
-  position: relative;
-  padding-left: 38px;
-  text-align: left;
+div#ez-toc-container {
+  border: none;
+  box-shadow: none;
+  background: transparent;
 }
 
-.ez-toc-list li::before {
-  position: absolute;
-  content: '';
-  left: 0;
-  top: 0;
-  width: 20px;
-  height: 15px;
-  background: url(assets/images/svg/right.svg) no-repeat;
-}
-
-.ez-toc-list a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.ez-toc-list a:hover {
-  text-decoration: underline;
-}
-
-#ez-toc-container {
-  max-width: 480px;
-  display: flex;
-  flex-direction: column;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 58px;
-  padding-right: 20px;
-  background: #F6E3E4 url(assets/images/svg/toc-bg.svg) no-repeat right -100px;
-}
-
-div.toc-item {
-  margin: 0;
-  width: 100%;
-}
-
-.ez-toc-title-container {
-  margin: 0!important;
-}
-
-p.ez-toc-title {
-  margin: 0;
-  margin-bottom: 59px;
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: 800;
-  position: relative;
-  color: #000;
-  z-index: 2;
-}
-
-p.ez-toc-title::before {
-  position: absolute;
-  left: -50px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  content: '';
-  z-index: -1;
-  content: 'С';
-  font-family: Times;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 100px;
-  line-height: 115px;
+.dark div#ez-toc-container ul.ez-toc-list a {
   color: #ffffff;
 }
 
-.no_bullets ul,
-.no_bullets li {
-  list-style: none;
-}
-
-.dark .ez-toc-link {
-  color: #000;
+.dark div#ez-toc-container ul.ez-toc-list a:visited {
+  color: #8224e3;
 }
 
 .header__menu {
@@ -3231,7 +3156,7 @@ input[name="your-acceptance"] {
 
   .header__logo img {
     width: 108px;
-    height: 50px;
+    height: auto;
   }
 
   .header__menu-toggle {
